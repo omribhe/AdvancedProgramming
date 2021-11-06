@@ -36,45 +36,7 @@ string.h
 math.h
 -
 
-/home/omri/CLionProjects/Advanced Programming/anomaly_detection_util.cpp
-anomaly_detection_util.h
 /home/omri/CLionProjects/Advanced Programming/anomaly_detection_util.h
-cmath
--
-
-/home/omri/CLionProjects/Advanced Programming/anomaly_detection_util.h
-
-/home/omri/CLionProjects/Advanced Programming/main.cpp
-iostream
--
-vector
--
-AnomalyDetector.h
-/home/omri/CLionProjects/Advanced Programming/AnomalyDetector.h
-SimpleAnomalyDetector.h
-/home/omri/CLionProjects/Advanced Programming/SimpleAnomalyDetector.h
-fstream
--
-stdlib.h
--
-time.h
--
-math.h
--
-
-/home/omri/CLionProjects/Advanced Programming/timeseries.cpp
-timeseries.h
-/home/omri/CLionProjects/Advanced Programming/timeseries.h
-string
--
-fstream
--
-vector
--
-map
--
-algorithm
--
 
 /home/omri/CLionProjects/Advanced Programming/timeseries.h
 map
