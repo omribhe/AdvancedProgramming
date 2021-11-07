@@ -75,8 +75,9 @@ int main() {
     ad.learnNormal(ts);
     vector<correlatedFeatures> cf = ad.getNormalModel();
 
-    if (cf.size() != 2)
+    if (cf.size() != 2) {
         cout << "wrong size of correlated features (-40)" << endl;
+    }
     else
         for_each(cf.begin(), cf.end(), [&a1, &b1, &a2, &b2](correlatedFeatures c) {
             checkCorrelationTrain(c, "A", "C", a1, b1); // 20 points
