@@ -16,6 +16,12 @@ timeseries.h
 math.h
 /home/uri/CLionProjects/AdvancedProgramming/math.h
 
+/home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.cpp
+math.h
+-
+SimpleAnomalyDetector.h
+/home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.h
+
 /home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.h
 anomaly_detection_util.h
 /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h
@@ -31,24 +37,6 @@ math.h
 -
 
 /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h
-
-/home/uri/CLionProjects/AdvancedProgramming/main.cpp
-iostream
--
-vector
--
-AnomalyDetector.h
-/home/uri/CLionProjects/AdvancedProgramming/AnomalyDetector.h
-SimpleAnomalyDetector.h
-/home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.h
-fstream
--
-stdlib.h
--
-time.h
--
-math.h
--
 
 /home/uri/CLionProjects/AdvancedProgramming/timeseries.h
 map

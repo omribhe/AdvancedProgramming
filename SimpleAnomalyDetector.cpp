@@ -7,6 +7,16 @@
 
 
 //-------------------------------------------------------------------------------
+float CalculateTreshold(vector<float> v1, vector<float> v2,Line l) {
+    float max = 0;
+    for (int i = 0; i<v1.size();i++) {
+        Point p(v1[i], v2[i]);
+        float temp = dev(p, l);
+        if (temp > max)
+            max = temp;
+    }
+    return max*1.1;
+    }
 
 
 /**
@@ -14,16 +24,13 @@
  * @param cf the vector of the struct correlatedFeatures
  * @param ts the time series table
  */
-Line makeLinearRegression(   vector<float> v1, vector<float> v2) {
+Line makeLinearRegression(vector<float> v1, vector<float> v2) {
         Point* pointArray[v1.size()];
         for(int i=0;i<v1.size();i++)
             pointArray[i] = new Point(v1[i], v2[i]);
         return linear_reg(pointArray,v1.size());
 }
-
-
 //-------------------------------------------------------------------------------
-
 SimpleAnomalyDetector::SimpleAnomalyDetector() {
     // TODO Auto-generated constructor stub
 
@@ -58,13 +65,13 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
                 maxPearsonReturn = pearsonReturn;
             }
         }
-        if ((col != "")&&(maxPearsonReturn >= 0.29)) {
+        if ((col != "")&&(maxPearsonReturn >= 0.9)) {
             struct correlatedFeatures cor;
             cor.feature1 = itTable1->first;
             cor.feature2 = col;
             cor.corrlation = maxPearsonReturn;
-            cor.threshold = 0.29;
             cor.lin_reg = makeLinearRegression(itTable1->second, table.find(col)->second);
+            cor.threshold = CalculateTreshold(itTable1->second, table.find(col)->second, cor.lin_reg);
             cf.push_back(cor);
         }
     }
