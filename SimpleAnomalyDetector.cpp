@@ -10,7 +10,7 @@
 
 
 /**
- * make linear regression if the vectors are correlated more then the threshold.
+ * make linear regression if the vectors are correlated more than the threshold.
  * @param cf the vector of the struct correlatedFeatures
  * @param ts the time series table
  */
