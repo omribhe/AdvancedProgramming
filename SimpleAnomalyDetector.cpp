@@ -1,6 +1,6 @@
 //
 // Created by omri on 06/11/2021.
-//
+
 
 #include <math.h>
 #include "SimpleAnomalyDetector.h"
