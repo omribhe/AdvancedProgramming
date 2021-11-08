@@ -28,7 +28,11 @@ Line makeLinearRegression(vector<float> v1, vector<float> v2) {
         Point* pointArray[v1.size()];
         for(int i=0;i<v1.size();i++)
             pointArray[i] = new Point(v1[i], v2[i]);
-        return linear_reg(pointArray,v1.size());
+        Line l = linear_reg(pointArray,v1.size());
+        for (int i = 0; i < v1.size();i++) {
+            delete pointArray[i];
+        }
+        return l;
 }
 //-------------------------------------------------------------------------------
 SimpleAnomalyDetector::SimpleAnomalyDetector() {
