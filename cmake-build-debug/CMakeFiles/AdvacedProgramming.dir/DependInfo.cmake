@@ -8,10 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.cpp" "/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o"
-  "/home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.cpp" "/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.o"
-  "/home/uri/CLionProjects/AdvancedProgramming/main.cpp" "/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/main.cpp.o"
-  "/home/uri/CLionProjects/AdvancedProgramming/timeseries.cpp" "/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/timeseries.cpp.o"
+  "/home/omri/CLionProjects/Advanced Programming/SimpleAnomalyDetector.cpp" "/home/omri/CLionProjects/Advanced Programming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o"
+  "/home/omri/CLionProjects/Advanced Programming/anomaly_detection_util.cpp" "/home/omri/CLionProjects/Advanced Programming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.o"
+  "/home/omri/CLionProjects/Advanced Programming/main.cpp" "/home/omri/CLionProjects/Advanced Programming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/main.cpp.o"
+  "/home/omri/CLionProjects/Advanced Programming/timeseries.cpp" "/home/omri/CLionProjects/Advanced Programming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/timeseries.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

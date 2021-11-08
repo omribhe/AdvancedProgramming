@@ -77,6 +77,23 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
     }
 }
 
+void SimpleAnomalyDetector::checkDev(Line l, Point p, float threshold, long index, string s) {
+    float devReturn = dev(p,l);
+    if ( devReturn > threshold) {
+        AnomalyReport a(s, index + 1);
+        anomalyReports.push_back(a);
+    }
+}
+
 vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries& ts){
-    // TODO Auto-generated destructor stub
+    for(long i = 0; i < ts.getTable().begin()->second.size(); i++) {
+        vector<correlatedFeatures>::iterator it = this->cf.begin();
+        for (;it != this->cf.end(); it++) {
+            vector<float> v1 = ts.getTable().find(it->feature1)->second;
+            vector<float> v2 = ts.getTable().find(it->feature2)->second;
+            string s = it->feature1 + "-" + it->feature2;
+            checkDev(it->lin_reg,Point(v1[i],v2[i]),it->threshold,i,s);
+        }
+    }
+    return anomalyReports;
 }

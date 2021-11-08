@@ -6,27 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/home/uri/CLionProjects/AdvancedProgramming/AnomalyDetector.h
+/home/omri/CLionProjects/Advanced Programming/AnomalyDetector.h
 string
 -
 vector
 -
 timeseries.h
-/home/uri/CLionProjects/AdvancedProgramming/timeseries.h
+/home/omri/CLionProjects/Advanced Programming/timeseries.h
 math.h
-/home/uri/CLionProjects/AdvancedProgramming/math.h
+/home/omri/CLionProjects/Advanced Programming/math.h
 
-/home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.cpp
+/home/omri/CLionProjects/Advanced Programming/SimpleAnomalyDetector.cpp
 math.h
 -
 SimpleAnomalyDetector.h
-/home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.h
+/home/omri/CLionProjects/Advanced Programming/SimpleAnomalyDetector.h
 
-/home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.h
+/home/omri/CLionProjects/Advanced Programming/SimpleAnomalyDetector.h
 anomaly_detection_util.h
-/home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h
+/home/omri/CLionProjects/Advanced Programming/anomaly_detection_util.h
 AnomalyDetector.h
-/home/uri/CLionProjects/AdvancedProgramming/AnomalyDetector.h
+/home/omri/CLionProjects/Advanced Programming/AnomalyDetector.h
 vector
 -
 algorithm
@@ -36,11 +36,11 @@ string.h
 math.h
 -
 
-/home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h
+/home/omri/CLionProjects/Advanced Programming/anomaly_detection_util.h
 
-/home/uri/CLionProjects/AdvancedProgramming/timeseries.h
+/home/omri/CLionProjects/Advanced Programming/timeseries.h
 map
-/home/uri/CLionProjects/AdvancedProgramming/map
+/home/omri/CLionProjects/Advanced Programming/map
 vector
-/home/uri/CLionProjects/AdvancedProgramming/vector
+/home/omri/CLionProjects/Advanced Programming/vector
 

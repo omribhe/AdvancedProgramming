@@ -24,13 +24,14 @@ struct correlatedFeatures{
 
 class SimpleAnomalyDetector:public TimeSeriesAnomalyDetector{
     vector<correlatedFeatures> cf;
+    vector<AnomalyReport> anomalyReports;
 public:
     SimpleAnomalyDetector();
     virtual ~SimpleAnomalyDetector();
 
     virtual void learnNormal(const TimeSeries& ts);
     virtual vector<AnomalyReport> detect(const TimeSeries& ts);
-
+    void checkDev(Line l, Point p, float threshold, long index, string s);
     vector<correlatedFeatures> getNormalModel(){
         return cf;
     }
