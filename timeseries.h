@@ -16,7 +16,7 @@ public:
     TimeSeries(const char* CSVfileName){
         this->Table = fileToMap(CSVfileName);
     }
-    int CountNumberOfDataInRow(const char *CSVfileName);
+    int CountNumberOfDataInRow(string str);
     map<string, vector<float>> fileToMap(const char *CSVfileName);
     const map<string, vector<float>> getTable() const {
         return Table;
