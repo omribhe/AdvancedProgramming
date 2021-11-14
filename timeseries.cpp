@@ -1,5 +1,5 @@
 //
-// Created by omri on 01/11/2021.
+// Uri Greitser 209289891 and Omri Ben Hemo 313255242
 //
 
 #include "timeseries.h"
