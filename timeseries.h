@@ -1,6 +1,7 @@
 //
-// Created by omri on 06/11/2021.
+// Uri Greitser 209289891 and Omri Ben Hemo 313255242
 //
+
 
 #ifndef ADVACEDPROGRAMMING_TIMESERIES_H
 #define ADVACEDPROGRAMMING_TIMESERIES_H

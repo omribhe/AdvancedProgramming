@@ -1,6 +1,6 @@
 //
-// Created by omri on 06/11/2021.
-
+// Uri Greitser 209289891 and Omri Ben Hemo 313255242
+//
 
 #include <math.h>
 #include "SimpleAnomalyDetector.h"
@@ -22,7 +22,7 @@ float CalculateThreshold(vector<float> v1, vector<float> v2,Line l) {
         if (temp > max)
             max = temp;
     }
-    return max*1.1;
+    return max*1.2;
     }
 
 
@@ -81,7 +81,9 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
         for (itTable2 = next(itTable1); itTable2 != table.end(); ++itTable2) {
             //iterates over the vectors from the current one to the end
             float *vector2 = itTable2->second.data();
-            pearsonReturn = abs(pearson(vector1, vector2, size));
+            pearsonReturn = pearson(vector1, vector2, size); //check abs
+            if (pearsonReturn < 0)
+                pearsonReturn *= -1;
             if (pearsonReturn > maxPearsonReturn) {
                 //calculates the max pearson
                 col = itTable2->first;
