@@ -67,11 +67,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
     vector<float>::iterator iterSize;
     map<string, vector<float>>::iterator t;
     t = table.begin();
-    int size = 0;
-    for(iterSize = t->second.begin(); iterSize != t->second.end();iterSize++){
-        //size of vector
-        size += 1;
-    }
+    int size = t->second.size();
     for (itTable1 = table.begin(); itTable1 != table.end().operator--(); itTable1++) {
         //iterates over the table
         string col = "";
