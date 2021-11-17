@@ -100,6 +100,12 @@
 		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/main.cpp">
 			<Option target="AdvacedProgramming"/>
 		</Unit>
+		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/minCircle.cpp">
+			<Option target="AdvacedProgramming"/>
+		</Unit>
+		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/minCircle.h">
+			<Option target="AdvacedProgramming"/>
+		</Unit>
 		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/timeseries.cpp">
 			<Option target="AdvacedProgramming"/>
 		</Unit>
