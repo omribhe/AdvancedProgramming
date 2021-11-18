@@ -11,11 +11,9 @@ CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.o
  /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.cpp
  /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h
 CMakeFiles/AdvacedProgramming.dir/main.cpp.o
- /home/uri/CLionProjects/AdvancedProgramming/AnomalyDetector.h
- /home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.h
  /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h
  /home/uri/CLionProjects/AdvancedProgramming/main.cpp
- /home/uri/CLionProjects/AdvancedProgramming/timeseries.h
+ /home/uri/CLionProjects/AdvancedProgramming/minCircle.h
 CMakeFiles/AdvacedProgramming.dir/minCircle.cpp.o
  /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h
  /home/uri/CLionProjects/AdvancedProgramming/minCircle.cpp
