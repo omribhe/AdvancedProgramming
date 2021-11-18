@@ -21,6 +21,8 @@ public:
 };
 // --------------------------------------
 
+
+
 Circle findMinCircle(Point** points,size_t size);
 
 // you can add here additional methods
