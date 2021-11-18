@@ -34,6 +34,11 @@ float dev(Point p,Point** points, int size);
 // returns the deviation between point p and the line
 float dev(Point p,Line l);
 
+//float CalculateSlope (Point p1, Point p2);
+//Line CreateLineFromTwoPoints(Point p1, Point p2);
+//Point IntersectionPointOfTwoLines(Line l1, Line l2);
+//Line CreateLineFromPointAndSlope(Point p, float slope);
+
 
 
 

@@ -11,11 +11,9 @@ CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.o: \
  ../anomaly_detection_util.cpp \
  ../anomaly_detection_util.h
 CMakeFiles/AdvacedProgramming.dir/main.cpp.o: \
- ../AnomalyDetector.h \
- ../SimpleAnomalyDetector.h \
  ../anomaly_detection_util.h \
  ../main.cpp \
- ../timeseries.h
+ ../minCircle.h
 CMakeFiles/AdvacedProgramming.dir/minCircle.cpp.o: \
  ../anomaly_detection_util.h \
  ../minCircle.cpp \
