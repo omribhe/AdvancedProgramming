@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/omri/CLionProjects/Advanced Programming/anomaly_detection_util.h
+
+/home/omri/CLionProjects/Advanced Programming/minCircle.cpp
+minCircle.h
+/home/omri/CLionProjects/Advanced Programming/minCircle.h
+math.h
+-
+vector
+-
+
+/home/omri/CLionProjects/Advanced Programming/minCircle.h
+iostream
+-
+vector
+-
+stdlib.h
+-
+time.h
+-
+anomaly_detection_util.h
+/home/omri/CLionProjects/Advanced Programming/anomaly_detection_util.h
+
