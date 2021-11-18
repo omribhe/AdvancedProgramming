@@ -108,8 +108,10 @@ void check(){
 
     cout<<"done"<<endl;
 }
+void PrintCircle(Point p1, Point p2, Point p3)
 int main() {
-    for(int i=0;i<10000;i++) {
-        check();
-    }
+    Point p1(1,2);
+    Point p2(6,4);
+    Point p3(5,7);
+
 }

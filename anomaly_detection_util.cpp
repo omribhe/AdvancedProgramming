@@ -4,6 +4,7 @@
 
 #include "anomaly_detection_util.h"
 #include <cmath>
+#include <limits>
 
 
 // returns the variance of X and Y
@@ -98,3 +99,34 @@ float dev(Point p,Line l) {
     else
         return p.y - temp;
 }
+float CalculateSlope (Point p1, Point p2) {
+    float slope;
+    if (p1.x==p2.x)
+        slope = std::numeric_limits<float>::infinity();
+    slope = (p2.y-p1.y)/(p2.x-p1.x);
+    return slope;
+
+}
+Line CreateLineFromTwoPoints(Point p1, Point p2) {
+    float slope = CalculateSlope(p1,p2);
+    float b = p1.y - slope*p1.x;
+    Line l(slope,b);
+    return l;
+}
+Point IntersectionPointOfTwoLines(Line l1, Line l2) {
+//    mx+n = ax+b
+//            mx - ax = b -n
+//                    x(m-a) = b-n
+//                            x = (b-n)/(m-a)
+    float x = (l2.b-l1.b)/(l1.a-l2.a);
+    float y = l1.a*x+l1.b;
+    return Point(x,y);
+}
+Line CreateLineFromPointAndSlope(Point p, float slope) {
+    float b = p.y-slope*p.x;
+    return Line(slope,b);
+            //y = mx+b
+            //b= y-mx
+}
+
+
