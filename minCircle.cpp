@@ -58,8 +58,8 @@ bool AreAllPointsInCircle (Circle c, vector<Point*> p) {
         Point temp = *p[i];
         if(IsPointInCircle(temp,c) == false)
             return false;
-        return true;
     }
+    return true;
 }
 Circle CreateCircleFromTwoPoints (Point p1, Point p2) {
     Point center((p1.x+p2.x)/2,(p1.y+p2.y)/2);
@@ -77,8 +77,7 @@ Circle CreateCircleFromThreePoints (Point p1, Point p2,Point p3) {
     float radius = DistanceBetweenTwoPoints(center,p1);
     return Circle(center,radius);
 }
-Circle findMinCircleHelpAlgorithm(vector<Point*> p, vector<Point*> r) {
-    vector<Point*> copy = p;
+Circle findMinCircleHelpAlgorithm(vector<Point*> p, vector<Point*> r, vector<Point*> copy) {
     if (p.size() == 0 || r.size() == 3) {
         if (r.size() == 0) {
             return Circle(Point(0, 0), 0);
@@ -102,16 +101,15 @@ Circle findMinCircleHelpAlgorithm(vector<Point*> p, vector<Point*> r) {
             c = CreateCircleFromThreePoints(*r[0], *r[1], *r[2]);
             return c;
         }
-        std::shuffle(p.begin(), p.end(), std::random_device());
-        Point *point = p[p.size() - 1];
-        p.pop_back();
-        Circle d = findMinCircleHelpAlgorithm(p, r);
-        if (IsPointInCircle(*point, d)) {
-            return d;
-        } else {
-            r.push_back(point);
-            return findMinCircleHelpAlgorithm(p, r);
-        }
+    }
+    Point point = *p[p.size() - 1];
+    p.pop_back();
+    Circle d = findMinCircleHelpAlgorithm(p, r,copy);
+    if (IsPointInCircle(point, d)) {
+        return d;
+    } else {
+        r.push_back(&point);
+        return findMinCircleHelpAlgorithm(p, r, copy);
     }
 }
 
@@ -121,7 +119,8 @@ Circle findMinCircle(Point** points,size_t size) {
         p.push_back(points[i]);
     }
     vector<Point*> r;
-    return findMinCircleHelpAlgorithm(p,r);
+    vector<Point *> copy = p;
+    return findMinCircleHelpAlgorithm(p,r,copy);
 }
 
 
