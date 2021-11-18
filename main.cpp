@@ -79,8 +79,6 @@ int foo() {
     return 0;
 }
 int main() {
-    for(int i =0;i<1;i++) {
-
         foo();
     }
-}
+
