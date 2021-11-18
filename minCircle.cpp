@@ -77,8 +77,8 @@ Circle CreateCircleFromThreePoints (Point p1, Point p2,Point p3) {
     float radius = DistanceBetweenTwoPoints(center,p1);
     return Circle(center,radius);
 }
-Circle findMinCircleHelpAlgorithm(vector<Point*> p, vector<Point*> r, vector<Point*> copy) {
-    if (p.size() == 0 || r.size() == 3) {
+Circle findMinCircleHelpAlgorithm(vector<Point*>& p, vector<Point*> r, int size) {
+    if (size == 0 || r.size() == 3) {
         if (r.size() == 0) {
             return Circle(Point(0, 0), 0);
         }
@@ -90,26 +90,25 @@ Circle findMinCircleHelpAlgorithm(vector<Point*> p, vector<Point*> r, vector<Poi
         }
         if (r.size() == 3) {
             Circle c = CreateCircleFromTwoPoints(*r[0], *r[1]);
-            if (AreAllPointsInCircle(c, copy) == true)
+            if (AreAllPointsInCircle(c, p) == true)
                 return c;
             c = CreateCircleFromTwoPoints(*r[0], *r[2]);
-            if (AreAllPointsInCircle(c, copy) == true)
+            if (AreAllPointsInCircle(c, p) == true)
                 return c;
             c = CreateCircleFromTwoPoints(*r[1], *r[2]);
-            if (AreAllPointsInCircle(c, copy) == true)
+            if (AreAllPointsInCircle(c, p) == true)
                 return c;
             c = CreateCircleFromThreePoints(*r[0], *r[1], *r[2]);
             return c;
         }
     }
-    Point point = *p[p.size() - 1];
-    p.pop_back();
-    Circle d = findMinCircleHelpAlgorithm(p, r,copy);
+    Point point = *p[size];
+    Circle d = findMinCircleHelpAlgorithm(p, r,size-1);
     if (IsPointInCircle(point, d)) {
         return d;
     } else {
         r.push_back(&point);
-        return findMinCircleHelpAlgorithm(p, r, copy);
+        return findMinCircleHelpAlgorithm(p, r, size - 1);
     }
 }
 
@@ -120,7 +119,7 @@ Circle findMinCircle(Point** points,size_t size) {
     }
     vector<Point*> r;
     vector<Point *> copy = p;
-    return findMinCircleHelpAlgorithm(p,r,copy);
+    return findMinCircleHelpAlgorithm(p,r,p.size()-1);
 }
 
 

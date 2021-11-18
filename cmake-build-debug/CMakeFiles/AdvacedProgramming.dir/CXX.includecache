@@ -8,20 +8,20 @@
 
 /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h
 
-/home/uri/CLionProjects/AdvancedProgramming/minCircle.cpp
-minCircle.h
-/home/uri/CLionProjects/AdvancedProgramming/minCircle.h
-math.h
+/home/uri/CLionProjects/AdvancedProgramming/main.cpp
+iostream
 -
 vector
 -
-anomaly_detection_util.h
-/home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h
-limits
+stdlib.h
 -
-random
+time.h
 -
-algorithm
+math.h
+-
+minCircle.h
+/home/uri/CLionProjects/AdvancedProgramming/minCircle.h
+chrono
 -
 
 /home/uri/CLionProjects/AdvancedProgramming/minCircle.h

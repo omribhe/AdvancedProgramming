@@ -23,7 +23,7 @@ Point** generate(Point center,int R, size_t size){
 }
 
 
-int main(){
+int foo() {
     srand (time(NULL));
     const size_t N=250;
     float R=10+rand()%1000;
@@ -77,4 +77,10 @@ int main(){
 
     cout<<"done"<<endl;
     return 0;
+}
+int main() {
+    for(int i =0;i<1;i++) {
+
+        foo();
+    }
 }
