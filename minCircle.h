@@ -18,10 +18,9 @@ public:
 	Point center;
 	float radius;
 	Circle(Point c,float r):center(c),radius(r){}
+    Circle() : center(Point(0,0)),radius(0){}
 };
 // --------------------------------------
-
-
 
 Circle findMinCircle(Point** points,size_t size);
 

@@ -6,25 +6,51 @@
 
 #IncludeRegexTransform: 
 
-/home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h
-
-/home/uri/CLionProjects/AdvancedProgramming/main.cpp
-iostream
+/home/omri/CLionProjects/Advanced Programming/AnomalyDetector.h
+string
 -
 vector
 -
-stdlib.h
+timeseries.h
+/home/omri/CLionProjects/Advanced Programming/timeseries.h
+math.h
+/home/omri/CLionProjects/Advanced Programming/math.h
+
+/home/omri/CLionProjects/Advanced Programming/HybridAnomalyDetector.cpp
+HybridAnomalyDetector.h
+/home/omri/CLionProjects/Advanced Programming/HybridAnomalyDetector.h
+
+/home/omri/CLionProjects/Advanced Programming/HybridAnomalyDetector.h
+SimpleAnomalyDetector.h
+/home/omri/CLionProjects/Advanced Programming/SimpleAnomalyDetector.h
+minCircle.h
+/home/omri/CLionProjects/Advanced Programming/minCircle.h
+
+/home/omri/CLionProjects/Advanced Programming/SimpleAnomalyDetector.cpp
+math.h
 -
-time.h
+SimpleAnomalyDetector.h
+/home/omri/CLionProjects/Advanced Programming/SimpleAnomalyDetector.h
+
+/home/omri/CLionProjects/Advanced Programming/SimpleAnomalyDetector.h
+anomaly_detection_util.h
+/home/omri/CLionProjects/Advanced Programming/anomaly_detection_util.h
+AnomalyDetector.h
+/home/omri/CLionProjects/Advanced Programming/AnomalyDetector.h
+vector
+-
+algorithm
+-
+string.h
 -
 math.h
 -
 minCircle.h
-/home/uri/CLionProjects/AdvancedProgramming/minCircle.h
-chrono
--
+/home/omri/CLionProjects/Advanced Programming/minCircle.h
 
-/home/uri/CLionProjects/AdvancedProgramming/minCircle.h
+/home/omri/CLionProjects/Advanced Programming/anomaly_detection_util.h
+
+/home/omri/CLionProjects/Advanced Programming/minCircle.h
 iostream
 -
 vector
@@ -34,5 +60,11 @@ stdlib.h
 time.h
 -
 anomaly_detection_util.h
-/home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h
+/home/omri/CLionProjects/Advanced Programming/anomaly_detection_util.h
+
+/home/omri/CLionProjects/Advanced Programming/timeseries.h
+map
+/home/omri/CLionProjects/Advanced Programming/map
+vector
+/home/omri/CLionProjects/Advanced Programming/vector
 
