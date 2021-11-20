@@ -6,37 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/home/omri/CLionProjects/Advanced Programming/AnomalyDetector.h
+/home/uri/CLionProjects/AdvancedProgramming/AnomalyDetector.h
 string
 -
 vector
 -
 timeseries.h
-/home/omri/CLionProjects/Advanced Programming/timeseries.h
+/home/uri/CLionProjects/AdvancedProgramming/timeseries.h
 math.h
-/home/omri/CLionProjects/Advanced Programming/math.h
+/home/uri/CLionProjects/AdvancedProgramming/math.h
 
-/home/omri/CLionProjects/Advanced Programming/HybridAnomalyDetector.cpp
-HybridAnomalyDetector.h
-/home/omri/CLionProjects/Advanced Programming/HybridAnomalyDetector.h
-
-/home/omri/CLionProjects/Advanced Programming/HybridAnomalyDetector.h
+/home/uri/CLionProjects/AdvancedProgramming/HybridAnomalyDetector.h
 SimpleAnomalyDetector.h
-/home/omri/CLionProjects/Advanced Programming/SimpleAnomalyDetector.h
+/home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.h
 minCircle.h
-/home/omri/CLionProjects/Advanced Programming/minCircle.h
+/home/uri/CLionProjects/AdvancedProgramming/minCircle.h
 
-/home/omri/CLionProjects/Advanced Programming/SimpleAnomalyDetector.cpp
-math.h
--
-SimpleAnomalyDetector.h
-/home/omri/CLionProjects/Advanced Programming/SimpleAnomalyDetector.h
-
-/home/omri/CLionProjects/Advanced Programming/SimpleAnomalyDetector.h
+/home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.h
 anomaly_detection_util.h
-/home/omri/CLionProjects/Advanced Programming/anomaly_detection_util.h
+/home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h
 AnomalyDetector.h
-/home/omri/CLionProjects/Advanced Programming/AnomalyDetector.h
+/home/uri/CLionProjects/AdvancedProgramming/AnomalyDetector.h
 vector
 -
 algorithm
@@ -46,11 +36,27 @@ string.h
 math.h
 -
 minCircle.h
-/home/omri/CLionProjects/Advanced Programming/minCircle.h
+/home/uri/CLionProjects/AdvancedProgramming/minCircle.h
 
-/home/omri/CLionProjects/Advanced Programming/anomaly_detection_util.h
+/home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h
 
-/home/omri/CLionProjects/Advanced Programming/minCircle.h
+/home/uri/CLionProjects/AdvancedProgramming/main.cpp
+iostream
+-
+vector
+-
+HybridAnomalyDetector.h
+/home/uri/CLionProjects/AdvancedProgramming/HybridAnomalyDetector.h
+fstream
+-
+stdlib.h
+-
+time.h
+-
+math.h
+-
+
+/home/uri/CLionProjects/AdvancedProgramming/minCircle.h
 iostream
 -
 vector
@@ -60,11 +66,11 @@ stdlib.h
 time.h
 -
 anomaly_detection_util.h
-/home/omri/CLionProjects/Advanced Programming/anomaly_detection_util.h
+/home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h
 
-/home/omri/CLionProjects/Advanced Programming/timeseries.h
+/home/uri/CLionProjects/AdvancedProgramming/timeseries.h
 map
-/home/omri/CLionProjects/Advanced Programming/map
+/home/uri/CLionProjects/AdvancedProgramming/map
 vector
-/home/omri/CLionProjects/Advanced Programming/vector
+/home/uri/CLionProjects/AdvancedProgramming/vector
 

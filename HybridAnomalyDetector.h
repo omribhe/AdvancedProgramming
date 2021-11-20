@@ -14,6 +14,8 @@ class HybridAnomalyDetector:public SimpleAnomalyDetector {
 public:
     HybridAnomalyDetector();
     virtual ~HybridAnomalyDetector();
+    virtual vector<AnomalyReport> detect(const TimeSeries& ts);
+
 
 };
 

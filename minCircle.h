@@ -23,6 +23,9 @@ public:
 // --------------------------------------
 
 Circle findMinCircle(Point** points,size_t size);
+bool IsPointInCircle(Point p, Circle c);
+bool IsPointInCircleMultipliedRadius(Point p, Circle c);
+
 
 // you can add here additional methods
 

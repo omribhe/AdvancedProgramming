@@ -76,6 +76,12 @@ bool IsPointInCircle(Point p, Circle c) {
         return true;
     return false;
 }
+bool IsPointInCircleMultipliedRadius(Point p, Circle c) {
+    float distance = DistanceBetweenTwoPoints(p,c.center);
+    if (distance < c.radius*1.1)
+        return true;
+    return false;
+}
 /**
  *
  * @param c circle
