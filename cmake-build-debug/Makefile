@@ -57,10 +57,10 @@ RM = /snap/clion/169/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uri/CLionProjects/AdvancedProgramming
+CMAKE_SOURCE_DIR = "/home/omri/CLionProjects/Advanced Programming"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/omri/CLionProjects/Advanced Programming/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles /home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/omri/CLionProjects/Advanced Programming/cmake-build-debug/CMakeFiles" "/home/omri/CLionProjects/Advanced Programming/cmake-build-debug//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/omri/CLionProjects/Advanced Programming/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -128,6 +128,30 @@ AdvacedProgramming: cmake_check_build_system
 AdvacedProgramming/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/build
 .PHONY : AdvacedProgramming/fast
+
+HybridAnomalyDetector.o: HybridAnomalyDetector.cpp.o
+.PHONY : HybridAnomalyDetector.o
+
+# target to build an object file
+HybridAnomalyDetector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.o
+.PHONY : HybridAnomalyDetector.cpp.o
+
+HybridAnomalyDetector.i: HybridAnomalyDetector.cpp.i
+.PHONY : HybridAnomalyDetector.i
+
+# target to preprocess a source file
+HybridAnomalyDetector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.i
+.PHONY : HybridAnomalyDetector.cpp.i
+
+HybridAnomalyDetector.s: HybridAnomalyDetector.cpp.s
+.PHONY : HybridAnomalyDetector.s
+
+# target to generate assembly for a file
+HybridAnomalyDetector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.s
+.PHONY : HybridAnomalyDetector.cpp.s
 
 SimpleAnomalyDetector.o: SimpleAnomalyDetector.cpp.o
 .PHONY : SimpleAnomalyDetector.o
@@ -258,6 +282,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... AdvacedProgramming"
+	@echo "... HybridAnomalyDetector.o"
+	@echo "... HybridAnomalyDetector.i"
+	@echo "... HybridAnomalyDetector.s"
 	@echo "... SimpleAnomalyDetector.o"
 	@echo "... SimpleAnomalyDetector.i"
 	@echo "... SimpleAnomalyDetector.s"

@@ -41,6 +41,14 @@ Line makeLinearRegression(vector<float> v1, vector<float> v2) {
         }
         return l;
 }
+
+Point** returnPointArray(vector<float> v1, vector<float> v2) {
+    Point* array[v1.size()];
+    for (int i; i < v1.size(); i++) {
+        array[i] = new Point(v1[i],v2[i]);
+    }
+    return array;
+}
 //-------------------------------------------------------------------------------
 /**
  * default constructor
@@ -89,11 +97,26 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
         if ((col != "")&&(maxPearsonReturn >= 0.9)) {
             //creates a new correlatedFeatures struct that represents two correlated vectors
             struct correlatedFeatures cor;
+            cor.flag = 1;
             cor.feature1 = itTable1->first;
             cor.feature2 = col;
             cor.corrlation = maxPearsonReturn;
             cor.lin_reg = makeLinearRegression(itTable1->second, table.find(col)->second);
             cor.threshold = CalculateThreshold(itTable1->second, table.find(col)->second, cor.lin_reg);
+            cor.normalCircle = Circle();
+            cf.push_back(cor);
+        }
+        if((col != "") && (maxPearsonReturn >= 0.5) && (maxPearsonReturn < 0.9)) {
+            //creates a new correlatedFeatures struct that represents two correlated vectors
+            struct correlatedFeatures cor;
+            cor.flag = 0;
+            cor.feature1 = itTable1->first;
+            cor.feature2 = col;
+            cor.corrlation = maxPearsonReturn;
+            cor.lin_reg = makeLinearRegression(itTable1->second, table.find(col)->second);
+            Point** pointArray = returnPointArray(itTable1->second, table.find(col)->second);
+            cor.normalCircle = findMinCircle(pointArray, itTable1->second.size());
+            cor.threshold = cor.normalCircle.radius;
             cf.push_back(cor);
         }
     }
