@@ -20,9 +20,13 @@ CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.o: \
  ../anomaly_detection_util.cpp \
  ../anomaly_detection_util.h
 CMakeFiles/AdvacedProgramming.dir/main.cpp.o: \
+ ../AnomalyDetector.h \
+ ../HybridAnomalyDetector.h \
+ ../SimpleAnomalyDetector.h \
  ../anomaly_detection_util.h \
  ../main.cpp \
- ../minCircle.h
+ ../minCircle.h \
+ ../timeseries.h
 CMakeFiles/AdvacedProgramming.dir/minCircle.cpp.o: \
  ../anomaly_detection_util.h \
  ../minCircle.cpp \

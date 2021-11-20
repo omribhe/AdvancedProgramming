@@ -4,6 +4,7 @@
 
 #include <math.h>
 #include "SimpleAnomalyDetector.h"
+//#include "minCircle.cpp"
 
 
 //-------------------------------------------------------------------------------
@@ -43,8 +44,8 @@ Line makeLinearRegression(vector<float> v1, vector<float> v2) {
 }
 
 Point** returnPointArray(vector<float> v1, vector<float> v2) {
-    Point* array[v1.size()];
-    for (int i; i < v1.size(); i++) {
+    Point** array = new Point* [v1.size()];
+    for (int i = 0; i < v1.size(); i++) {
         array[i] = new Point(v1[i],v2[i]);
     }
     return array;
@@ -113,10 +114,10 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
             cor.feature1 = itTable1->first;
             cor.feature2 = col;
             cor.corrlation = maxPearsonReturn;
-            cor.lin_reg = makeLinearRegression(itTable1->second, table.find(col)->second);
+            cor.lin_reg = Line();
             Point** pointArray = returnPointArray(itTable1->second, table.find(col)->second);
             cor.normalCircle = findMinCircle(pointArray, itTable1->second.size());
-            cor.threshold = cor.normalCircle.radius;
+            cor.threshold = cor.normalCircle.radius*1.1;
             cf.push_back(cor);
         }
     }
@@ -136,22 +137,41 @@ void SimpleAnomalyDetector::checkDev(Line l, Point p, float threshold, long inde
         anomalyReports.push_back(a);
     }
 }
+
+void SimpleAnomalyDetector::detectIfFlagIs1(const TimeSeries& ts, vector<correlatedFeatures>::iterator it, int i) {
+    //iterates over the vector that holds the correlated vectors.
+    vector<float> v1 = ts.getTable().find(it->feature1)->second;
+    vector<float> v2 = ts.getTable().find(it->feature2)->second;
+    string s = it->feature1 + "-" + it->feature2;
+    //sends all the data to checkDev that checks if an anomaly was found.
+    checkDev(it->lin_reg, Point(v1[i], v2[i]), it->threshold, i, s);
+
+}
+void SimpleAnomalyDetector::detectIfFlagIs0(const TimeSeries& ts, vector<correlatedFeatures>::iterator it, int i) {
+    //iterates over the vector that holds the correlated vectors.
+    vector<float> v1 = ts.getTable().find(it->feature1)->second;
+    vector<float> v2 = ts.getTable().find(it->feature2)->second;
+    Point check = Point(v1[i],v2[i]);
+    if (IsPointInCircleMultipliedRadius(check,it->normalCircle) == false){
+        string s = it->feature1 + "-" + it->feature2;
+        AnomalyReport a(s, i + 1);
+        anomalyReports.push_back(a);
+    }
+}
+
 /**
  * detects anomalies in the data
  * @param ts the CSV file data
  * @return a vector of the all the anomaly reports.
  */
-vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries& ts){
-    for(long i = 0; i < ts.getTable().begin()->second.size(); i++) {
+vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries& ts) {
+    for (long i = 0; i < ts.getTable().begin()->second.size(); i++) {
         //iterates over each row
         vector<correlatedFeatures>::iterator it = this->cf.begin();
-        for (;it != this->cf.end(); it++) {
-            //iterates over the vector that holds the correlated vectors.
-            vector<float> v1 = ts.getTable().find(it->feature1)->second;
-            vector<float> v2 = ts.getTable().find(it->feature2)->second;
-            string s = it->feature1 + "-" + it->feature2;
-            //sends all the data to checkDev that checks if an anomaly was found.
-            checkDev(it->lin_reg,Point(v1[i],v2[i]),it->threshold,i,s);
+        for (; it != this->cf.end(); it++) {
+            if (it->flag == 1) {
+                detectIfFlagIs1(ts,it,i);
+            }
         }
     }
     return anomalyReports;

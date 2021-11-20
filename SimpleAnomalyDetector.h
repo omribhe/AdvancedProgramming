@@ -26,6 +26,7 @@ struct correlatedFeatures{
 
 
 class SimpleAnomalyDetector:public TimeSeriesAnomalyDetector{
+protected:
     vector<correlatedFeatures> cf;
     vector<AnomalyReport> anomalyReports;
 public:
@@ -38,8 +39,14 @@ public:
     vector<correlatedFeatures> getNormalModel(){
         return cf;
     }
+    vector<AnomalyReport> getAnomalyReports(){
+        return anomalyReports;
+    }
 
-};
+    void detectIfFlagIs1(const TimeSeries& ts, vector<correlatedFeatures>::iterator it, int i);
+    void detectIfFlagIs0(const TimeSeries& ts, vector<correlatedFeatures>::iterator it, int i);
+
+    };
 
 
 
