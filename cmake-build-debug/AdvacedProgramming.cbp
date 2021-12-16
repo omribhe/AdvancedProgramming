@@ -85,16 +85,19 @@
 		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/AnomalyDetector.h">
 			<Option target="AdvacedProgramming"/>
 		</Unit>
-		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/Command.h">
+		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/CLI.cpp">
 			<Option target="AdvacedProgramming"/>
 		</Unit>
-		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/DefaultIO.h">
+		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/CLI.h">
 			<Option target="AdvacedProgramming"/>
 		</Unit>
 		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/HybridAnomalyDetector.cpp">
 			<Option target="AdvacedProgramming"/>
 		</Unit>
 		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/HybridAnomalyDetector.h">
+			<Option target="AdvacedProgramming"/>
+		</Unit>
+		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/MainTrain.cpp">
 			<Option target="AdvacedProgramming"/>
 		</Unit>
 		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.cpp">
@@ -109,7 +112,7 @@
 		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h">
 			<Option target="AdvacedProgramming"/>
 		</Unit>
-		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/main.cpp">
+		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/commands.h">
 			<Option target="AdvacedProgramming"/>
 		</Unit>
 		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/minCircle.cpp">

@@ -66,22 +66,9 @@ include CMakeFiles/AdvacedProgramming.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/AdvacedProgramming.dir/flags.make
 
-CMakeFiles/AdvacedProgramming.dir/main.cpp.o: CMakeFiles/AdvacedProgramming.dir/flags.make
-CMakeFiles/AdvacedProgramming.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AdvacedProgramming.dir/main.cpp.o"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AdvacedProgramming.dir/main.cpp.o -c /home/uri/CLionProjects/AdvancedProgramming/main.cpp
-
-CMakeFiles/AdvacedProgramming.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AdvacedProgramming.dir/main.cpp.i"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uri/CLionProjects/AdvancedProgramming/main.cpp > CMakeFiles/AdvacedProgramming.dir/main.cpp.i
-
-CMakeFiles/AdvacedProgramming.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AdvacedProgramming.dir/main.cpp.s"
-	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uri/CLionProjects/AdvancedProgramming/main.cpp -o CMakeFiles/AdvacedProgramming.dir/main.cpp.s
-
 CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.o: CMakeFiles/AdvacedProgramming.dir/flags.make
 CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.o: ../anomaly_detection_util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.o -c /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.cpp
 
 CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.i: cmake_force
@@ -94,7 +81,7 @@ CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.s: cmake_force
 
 CMakeFiles/AdvacedProgramming.dir/timeseries.cpp.o: CMakeFiles/AdvacedProgramming.dir/flags.make
 CMakeFiles/AdvacedProgramming.dir/timeseries.cpp.o: ../timeseries.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AdvacedProgramming.dir/timeseries.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AdvacedProgramming.dir/timeseries.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AdvacedProgramming.dir/timeseries.cpp.o -c /home/uri/CLionProjects/AdvancedProgramming/timeseries.cpp
 
 CMakeFiles/AdvacedProgramming.dir/timeseries.cpp.i: cmake_force
@@ -107,7 +94,7 @@ CMakeFiles/AdvacedProgramming.dir/timeseries.cpp.s: cmake_force
 
 CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o: CMakeFiles/AdvacedProgramming.dir/flags.make
 CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o: ../SimpleAnomalyDetector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o -c /home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.cpp
 
 CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.i: cmake_force
@@ -120,7 +107,7 @@ CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.s: cmake_force
 
 CMakeFiles/AdvacedProgramming.dir/minCircle.cpp.o: CMakeFiles/AdvacedProgramming.dir/flags.make
 CMakeFiles/AdvacedProgramming.dir/minCircle.cpp.o: ../minCircle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AdvacedProgramming.dir/minCircle.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AdvacedProgramming.dir/minCircle.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AdvacedProgramming.dir/minCircle.cpp.o -c /home/uri/CLionProjects/AdvancedProgramming/minCircle.cpp
 
 CMakeFiles/AdvacedProgramming.dir/minCircle.cpp.i: cmake_force
@@ -133,7 +120,7 @@ CMakeFiles/AdvacedProgramming.dir/minCircle.cpp.s: cmake_force
 
 CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.o: CMakeFiles/AdvacedProgramming.dir/flags.make
 CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.o: ../HybridAnomalyDetector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.o -c /home/uri/CLionProjects/AdvancedProgramming/HybridAnomalyDetector.cpp
 
 CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.i: cmake_force
@@ -144,27 +131,55 @@ CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uri/CLionProjects/AdvancedProgramming/HybridAnomalyDetector.cpp -o CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.s
 
+CMakeFiles/AdvacedProgramming.dir/CLI.cpp.o: CMakeFiles/AdvacedProgramming.dir/flags.make
+CMakeFiles/AdvacedProgramming.dir/CLI.cpp.o: ../CLI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AdvacedProgramming.dir/CLI.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AdvacedProgramming.dir/CLI.cpp.o -c /home/uri/CLionProjects/AdvancedProgramming/CLI.cpp
+
+CMakeFiles/AdvacedProgramming.dir/CLI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AdvacedProgramming.dir/CLI.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uri/CLionProjects/AdvancedProgramming/CLI.cpp > CMakeFiles/AdvacedProgramming.dir/CLI.cpp.i
+
+CMakeFiles/AdvacedProgramming.dir/CLI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AdvacedProgramming.dir/CLI.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uri/CLionProjects/AdvancedProgramming/CLI.cpp -o CMakeFiles/AdvacedProgramming.dir/CLI.cpp.s
+
+CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.o: CMakeFiles/AdvacedProgramming.dir/flags.make
+CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.o: ../MainTrain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.o -c /home/uri/CLionProjects/AdvancedProgramming/MainTrain.cpp
+
+CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uri/CLionProjects/AdvancedProgramming/MainTrain.cpp > CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.i
+
+CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uri/CLionProjects/AdvancedProgramming/MainTrain.cpp -o CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.s
+
 # Object files for target AdvacedProgramming
 AdvacedProgramming_OBJECTS = \
-"CMakeFiles/AdvacedProgramming.dir/main.cpp.o" \
 "CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.o" \
 "CMakeFiles/AdvacedProgramming.dir/timeseries.cpp.o" \
 "CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o" \
 "CMakeFiles/AdvacedProgramming.dir/minCircle.cpp.o" \
-"CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.o"
+"CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.o" \
+"CMakeFiles/AdvacedProgramming.dir/CLI.cpp.o" \
+"CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.o"
 
 # External object files for target AdvacedProgramming
 AdvacedProgramming_EXTERNAL_OBJECTS =
 
-AdvacedProgramming: CMakeFiles/AdvacedProgramming.dir/main.cpp.o
 AdvacedProgramming: CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.o
 AdvacedProgramming: CMakeFiles/AdvacedProgramming.dir/timeseries.cpp.o
 AdvacedProgramming: CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o
 AdvacedProgramming: CMakeFiles/AdvacedProgramming.dir/minCircle.cpp.o
 AdvacedProgramming: CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.o
+AdvacedProgramming: CMakeFiles/AdvacedProgramming.dir/CLI.cpp.o
+AdvacedProgramming: CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.o
 AdvacedProgramming: CMakeFiles/AdvacedProgramming.dir/build.make
 AdvacedProgramming: CMakeFiles/AdvacedProgramming.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable AdvacedProgramming"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable AdvacedProgramming"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AdvacedProgramming.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

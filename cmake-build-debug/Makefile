@@ -129,6 +129,30 @@ AdvacedProgramming/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/build
 .PHONY : AdvacedProgramming/fast
 
+CLI.o: CLI.cpp.o
+.PHONY : CLI.o
+
+# target to build an object file
+CLI.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/CLI.cpp.o
+.PHONY : CLI.cpp.o
+
+CLI.i: CLI.cpp.i
+.PHONY : CLI.i
+
+# target to preprocess a source file
+CLI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/CLI.cpp.i
+.PHONY : CLI.cpp.i
+
+CLI.s: CLI.cpp.s
+.PHONY : CLI.s
+
+# target to generate assembly for a file
+CLI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/CLI.cpp.s
+.PHONY : CLI.cpp.s
+
 HybridAnomalyDetector.o: HybridAnomalyDetector.cpp.o
 .PHONY : HybridAnomalyDetector.o
 
@@ -152,6 +176,30 @@ HybridAnomalyDetector.s: HybridAnomalyDetector.cpp.s
 HybridAnomalyDetector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.s
 .PHONY : HybridAnomalyDetector.cpp.s
+
+MainTrain.o: MainTrain.cpp.o
+.PHONY : MainTrain.o
+
+# target to build an object file
+MainTrain.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.o
+.PHONY : MainTrain.cpp.o
+
+MainTrain.i: MainTrain.cpp.i
+.PHONY : MainTrain.i
+
+# target to preprocess a source file
+MainTrain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.i
+.PHONY : MainTrain.cpp.i
+
+MainTrain.s: MainTrain.cpp.s
+.PHONY : MainTrain.s
+
+# target to generate assembly for a file
+MainTrain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.s
+.PHONY : MainTrain.cpp.s
 
 SimpleAnomalyDetector.o: SimpleAnomalyDetector.cpp.o
 .PHONY : SimpleAnomalyDetector.o
@@ -200,30 +248,6 @@ anomaly_detection_util.s: anomaly_detection_util.cpp.s
 anomaly_detection_util.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.s
 .PHONY : anomaly_detection_util.cpp.s
-
-main.o: main.cpp.o
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/AdvacedProgramming.dir/build.make CMakeFiles/AdvacedProgramming.dir/main.cpp.s
-.PHONY : main.cpp.s
 
 minCircle.o: minCircle.cpp.o
 .PHONY : minCircle.o
@@ -282,18 +306,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... AdvacedProgramming"
+	@echo "... CLI.o"
+	@echo "... CLI.i"
+	@echo "... CLI.s"
 	@echo "... HybridAnomalyDetector.o"
 	@echo "... HybridAnomalyDetector.i"
 	@echo "... HybridAnomalyDetector.s"
+	@echo "... MainTrain.o"
+	@echo "... MainTrain.i"
+	@echo "... MainTrain.s"
 	@echo "... SimpleAnomalyDetector.o"
 	@echo "... SimpleAnomalyDetector.i"
 	@echo "... SimpleAnomalyDetector.s"
 	@echo "... anomaly_detection_util.o"
 	@echo "... anomaly_detection_util.i"
 	@echo "... anomaly_detection_util.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... minCircle.o"
 	@echo "... minCircle.i"
 	@echo "... minCircle.s"
