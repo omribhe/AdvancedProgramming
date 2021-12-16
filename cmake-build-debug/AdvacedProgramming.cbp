@@ -85,6 +85,12 @@
 		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/AnomalyDetector.h">
 			<Option target="AdvacedProgramming"/>
 		</Unit>
+		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/Command.h">
+			<Option target="AdvacedProgramming"/>
+		</Unit>
+		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/DefaultIO.h">
+			<Option target="AdvacedProgramming"/>
+		</Unit>
 		<Unit filename="/home/uri/CLionProjects/AdvancedProgramming/HybridAnomalyDetector.cpp">
 			<Option target="AdvacedProgramming"/>
 		</Unit>

@@ -3,7 +3,6 @@
 #include <vector>
 #include "anomaly_detection_util.h"
 #include <limits>
-#include <random>
 #include <algorithm>
 
 /**
@@ -76,6 +75,12 @@ bool IsPointInCircle(Point p, Circle c) {
         return true;
     return false;
 }
+/**
+ *
+ * @param p point
+ * @param c circle
+ * @return checks if the point is in the circle after multiplying the radius by 1.1
+ */
 bool IsPointInCircleMultipliedRadius(Point p, Circle c) {
     float distance = DistanceBetweenTwoPoints(p,c.center);
     if (distance < c.radius*1.1)

@@ -16,11 +16,21 @@ timeseries.h
 math.h
 /home/uri/CLionProjects/AdvancedProgramming/math.h
 
+/home/uri/CLionProjects/AdvancedProgramming/HybridAnomalyDetector.cpp
+HybridAnomalyDetector.h
+/home/uri/CLionProjects/AdvancedProgramming/HybridAnomalyDetector.h
+
 /home/uri/CLionProjects/AdvancedProgramming/HybridAnomalyDetector.h
 SimpleAnomalyDetector.h
 /home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.h
 minCircle.h
 /home/uri/CLionProjects/AdvancedProgramming/minCircle.h
+
+/home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.cpp
+math.h
+-
+SimpleAnomalyDetector.h
+/home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.h
 
 /home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.h
 anomaly_detection_util.h
@@ -39,22 +49,6 @@ minCircle.h
 /home/uri/CLionProjects/AdvancedProgramming/minCircle.h
 
 /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h
-
-/home/uri/CLionProjects/AdvancedProgramming/main.cpp
-iostream
--
-vector
--
-HybridAnomalyDetector.h
-/home/uri/CLionProjects/AdvancedProgramming/HybridAnomalyDetector.h
-fstream
--
-stdlib.h
--
-time.h
--
-math.h
--
 
 /home/uri/CLionProjects/AdvancedProgramming/minCircle.h
 iostream
