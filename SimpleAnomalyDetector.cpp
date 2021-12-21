@@ -42,7 +42,12 @@ Line makeLinearRegression(vector<float> v1, vector<float> v2) {
         }
         return l;
 }
-
+/**
+ *
+ * @param v1 vector of x's
+ * @param v2 vector of y's
+ * @return an array made from points that were created by an element of v1 and an element of v2.
+ */
 Point** returnPointArray(vector<float> v1, vector<float> v2) {
     Point** array = new Point* [v1.size()];
     for (int i = 0; i < v1.size(); i++) {
@@ -137,7 +142,13 @@ void SimpleAnomalyDetector::checkDev(Line l, Point p, float threshold, long inde
         anomalyReports.push_back(a);
     }
 }
-
+/**
+ * flag=1 means wer'e looking at a line, so checking as if it was a simple anomaly detector.
+ *
+ * @param ts time series object
+ * @param it the feature sent from the function
+ * @param i index
+ */
 void SimpleAnomalyDetector::detectIfFlagIs1(const TimeSeries& ts, vector<correlatedFeatures>::iterator it, int i) {
     //iterates over the vector that holds the correlated vectors.
     vector<float> v1 = ts.getTable().find(it->feature1)->second;
@@ -147,12 +158,20 @@ void SimpleAnomalyDetector::detectIfFlagIs1(const TimeSeries& ts, vector<correla
     checkDev(it->lin_reg, Point(v1[i], v2[i]), it->threshold, i, s);
 
 }
+/**
+ * flag=0 so checking if the point is in the circle that was created using the MEC.
+ *
+ * @param ts time series object
+ * @param it the feature sent from the function
+ * @param i index
+ */
 void SimpleAnomalyDetector::detectIfFlagIs0(const TimeSeries& ts, vector<correlatedFeatures>::iterator it, int i) {
     //iterates over the vector that holds the correlated vectors.
     vector<float> v1 = ts.getTable().find(it->feature1)->second;
     vector<float> v2 = ts.getTable().find(it->feature2)->second;
     Point check = Point(v1[i],v2[i]);
     if (IsPointInCircleMultipliedRadius(check,it->normalCircle) == false){
+        //checks if the point is in the circle. if it isn't, creates a new anomaly report object and adds it to the vector
         string s = it->feature1 + "-" + it->feature2;
         AnomalyReport a(s, i + 1);
         anomalyReports.push_back(a);

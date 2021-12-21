@@ -8,10 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/uri/CLionProjects/AdvancedProgramming/CLI.cpp" "/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/CLI.cpp.o"
   "/home/uri/CLionProjects/AdvancedProgramming/HybridAnomalyDetector.cpp" "/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.o"
+  "/home/uri/CLionProjects/AdvancedProgramming/MainTrain.cpp" "/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.o"
   "/home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.cpp" "/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o"
   "/home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.cpp" "/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.o"
-  "/home/uri/CLionProjects/AdvancedProgramming/main.cpp" "/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/main.cpp.o"
   "/home/uri/CLionProjects/AdvancedProgramming/minCircle.cpp" "/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/minCircle.cpp.o"
   "/home/uri/CLionProjects/AdvancedProgramming/timeseries.cpp" "/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir/timeseries.cpp.o"
   )
