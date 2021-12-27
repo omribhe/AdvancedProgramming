@@ -22,7 +22,7 @@ void CLI::start(){
     int index = 0;
     do {
         printMenu(menuVector);
-        cin >> index;
+        index = atoi(dio->read()); // check if input is legal and delete the casting
         menuVector[index - 1]->execute();
     } while (index != 6);
 }
