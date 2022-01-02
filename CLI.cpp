@@ -15,17 +15,17 @@ CLI::CLI(DefaultIO* dio){
 
 void CLI::start(){
     int index = 0;
-    SharedInformation* shared;
+    SharedInformation shared;
     do {
-        std::cout << "Welcome to the Anomaly Detection Server."<< std::endl;
-        std::cout << "Please choose an option:"<< std::endl;
+       dio->write("Welcome to the Anomaly Detection Server.");
+        dio->write("Please choose an option:");
         for(Command* element : menuVector)
-            cout<< element->description << endl;
+          dio->write(element->description);
         std::string s = dio->read();
         const char sFirst = s.front();
 
         index = sFirst - 49;     // check if input is legal and delete the casting
-        menuVector[index]->execute(shared);
+        menuVector[index]->execute(&shared);
     } while (index != 6);
 }
 

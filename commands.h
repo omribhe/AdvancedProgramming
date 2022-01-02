@@ -38,9 +38,8 @@ public:
 // you may add here helper classes
 class SharedInformation{
 public:
-    float threshold;
-    vector<AnomalyReport> reports;
-    SharedInformation():threshold(0.9){};
+    float threshold = 0.9;
+    vector<AnomalyReport> reports = {};
 };
 
 // you may edit this class
@@ -61,10 +60,10 @@ class UploadCSV : public Command
 public:
     UploadCSV(DefaultIO *dio) : Command(dio, "1. upload a time series csv file") {};
     void execute(SharedInformation* shared) override {
-        dio->write("Please upload your local train CSV file.");
+        dio->write("Please upload your local train CSV file.\n");
         dio->createNewCSVFile("train.csv");
         dio->write("Upload complete.\n");
-        dio->write("Please upload your local test CSV file.");
+        dio->write("Please upload your local test CSV file.\n");
         dio->createNewCSVFile("test.csv");
         dio->write("Upload complete.\n");
     }
