@@ -15,6 +15,7 @@ CLI::CLI(DefaultIO* dio){
 
 void CLI::start(){
     int index = 0;
+    SharedInformation* shared;
     do {
         std::cout << "Welcome to the Anomaly Detection Server."<< std::endl;
         std::cout << "Please choose an option:"<< std::endl;
@@ -24,7 +25,7 @@ void CLI::start(){
         const char sFirst = s.front();
 
         index = sFirst - 49;     // check if input is legal and delete the casting
-        menuVector[index]->execute();
+        menuVector[index]->execute(shared);
     } while (index != 6);
 }
 
