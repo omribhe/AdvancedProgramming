@@ -9,6 +9,7 @@
 #include <fstream>
 #include <vector>
 #include "HybridAnomalyDetector.h"
+#include "timeseries.h"
 
 using namespace std;
 
@@ -35,7 +36,11 @@ public:
 };
 
 // you may add here helper classes
-
+class SharedInformation{
+public:
+    float threshold;
+    SharedInformation():threshold(0.9){};
+};
 
 // you may edit this class
 class Command{
@@ -44,7 +49,7 @@ protected:
 public:
     const string description;
 	Command(DefaultIO* dio, const string s):dio(dio),description(s){}
-	virtual void execute()=0;
+	virtual void execute(SharedInformation* shared)=0;
 	virtual ~Command(){}
 };
 
@@ -54,7 +59,7 @@ class UploadCSV : public Command
 {
 public:
     UploadCSV(DefaultIO *dio) : Command(dio, "1. upload a time series csv file") {};
-    void execute() override {
+    void execute(SharedInformation* shared) override {
         dio->write("Please upload your local train CSV file.");
         dio->createNewCSVFile("train.csv");
         dio->write("Upload complete.\n");
@@ -70,28 +75,41 @@ class AlgorithmSettings : public Command
 {
 public:
     AlgorithmSettings(DefaultIO *dio) : Command(dio, "2. algorithm settings") {};
-    void execute() override {
-        std::cout<<"algo settings on"<<std::endl;
+    void execute(SharedInformation* shared) override {
+        // get the threshold from the shared state
+        float temp = 0;
+        do {
+            dio->write("The current correlation threshold is ");
+            dio->write(shared->threshold);
+            dio->write("\nType a new threshold\n");
+            dio->read(&temp);
+            if (temp < 1 && temp > 0)
+                shared->threshold = temp;
+            else
+                dio->write("please choose a value between 0 and 1.\n");
+        }
+        while (temp > 1 || temp < 0 );
     }
-
 
 };
 class DetectAnomalies : public Command
 {
 public:
     DetectAnomalies(DefaultIO *dio) : Command(dio, "3. detect anomalies") {};
-    void execute() override {
-        std::cout<<"detect on"<<std::endl;
+    void execute(SharedInformation* shared) override{
+        HybridAnomalyDetector detector;
+        TimeSeries tsTrain("train.csv");
+        detector.learnNormal(tsTrain);
+        TimeSeries tsTest("test.csv");
+        detector.detect(tsTest);
     }
-
-
 };
 
 class Results : public Command
 {
 public:
     Results(DefaultIO *dio) : Command(dio, "4. display results") {};
-    void execute() override {
+    void execute(SharedInformation* shared) override {
         std::cout<<"results on"<<std::endl;
     }
 
@@ -101,7 +119,7 @@ class UploadAndAnalyze : public Command
 {
 public:
     UploadAndAnalyze(DefaultIO *dio) : Command(dio, "5. upload anomalies and analyze results") {};
-    void execute() override {
+    void execute(SharedInformation* shared) override {
         std::cout<<"upload and analyze on"<<std::endl;
     }
 
@@ -111,7 +129,7 @@ class ExitCLI : public Command
 {
 public:
     ExitCLI(DefaultIO *dio) : Command(dio, "6. exit") {};
-    void execute() override {
+    void execute(SharedInformation* shared) override {
         std::cout<<"exit on" <<std::endl;
     }
 
