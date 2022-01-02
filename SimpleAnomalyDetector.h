@@ -18,7 +18,7 @@
 struct correlatedFeatures{
     string feature1,feature2;  // names of the correlated features
     int flag;  // 0 = circle, 1 = line.
-    float corrlation;
+    float correlation;
     Line lin_reg;
     float threshold;
     Circle normalCircle;
