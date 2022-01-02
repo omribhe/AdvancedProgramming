@@ -16,6 +16,14 @@ timeseries.h
 math.h
 /home/uri/CLionProjects/AdvancedProgramming/math.h
 
+/home/uri/CLionProjects/AdvancedProgramming/CLI.cpp
+CLI.h
+/home/uri/CLionProjects/AdvancedProgramming/CLI.h
+stdlib.h
+/home/uri/CLionProjects/AdvancedProgramming/stdlib.h
+cstdlib
+/home/uri/CLionProjects/AdvancedProgramming/cstdlib
+
 /home/uri/CLionProjects/AdvancedProgramming/CLI.h
 string.h
 -
