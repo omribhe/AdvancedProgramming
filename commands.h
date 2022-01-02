@@ -20,6 +20,17 @@ public:
 	virtual void read(float* f)=0;
 	virtual ~DefaultIO(){}
 
+    void createNewCSVFile(std::string name) {
+        ofstream out(name);
+        string s = read();
+        while (s != "done") {
+            out<<s<<endl;
+            s = read();
+        }
+        out.close();
+
+    }
+
 	// you may add additional methods here
 };
 
@@ -44,9 +55,12 @@ class UploadCSV : public Command
 public:
     UploadCSV(DefaultIO *dio) : Command(dio, "1. upload a time series csv file") {};
     void execute() override {
-        std::cout<<"Please upload your local train CSV file."<<std::endl;
-        string path = dio->read();
-        dio->write(path);
+        dio->write("Please upload your local train CSV file.");
+        dio->createNewCSVFile("train.csv");
+        dio->write("Upload complete.\n");
+        dio->write("Please upload your local test CSV file.");
+        dio->createNewCSVFile("test.csv");
+        dio->write("Upload complete.\n");
     }
 
 

@@ -1,4 +1,6 @@
 #include "CLI.h"
+#include "stdlib.h"
+#include "cstdlib"
 
 CLI::CLI(DefaultIO* dio){
     this->dio = dio;
@@ -9,21 +11,20 @@ CLI::CLI(DefaultIO* dio){
     this->menuVector.push_back(new UploadAndAnalyze(dio));
     this->menuVector.push_back(new ExitCLI(dio));
 }
-void printMenu(vector<Command*> menuVector) {
-    std::cout << "Welcome to the Anomaly Detection Server."<< std::endl;
-    std::cout << "Please choose an option:"<< std::endl;
-    for(Command* element : menuVector) {
-        cout<< element->description << endl;
-    }
 
-}
 
 void CLI::start(){
     int index = 0;
     do {
-        printMenu(menuVector);
-        cin >> index;
-        menuVector[index - 1]->execute();
+        std::cout << "Welcome to the Anomaly Detection Server."<< std::endl;
+        std::cout << "Please choose an option:"<< std::endl;
+        for(Command* element : menuVector)
+            cout<< element->description << endl;
+        std::string s = dio->read();
+        const char sFirst = s.front();
+
+        index = sFirst - 49;     // check if input is legal and delete the casting
+        menuVector[index]->execute();
     } while (index != 6);
 }
 
