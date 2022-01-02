@@ -1,4 +1,6 @@
 #include "CLI.h"
+#include "stdlib.h"
+#include "cstdlib"
 
 CLI::CLI(DefaultIO* dio){
     this->dio = dio;
