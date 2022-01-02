@@ -18,7 +18,7 @@
 struct correlatedFeatures{
     string feature1,feature2;  // names of the correlated features
     int flag;  // 0 = circle, 1 = line.
-    float corrlation;
+    float correlation;
     Line lin_reg;
     float threshold;
     Circle normalCircle;
@@ -29,6 +29,7 @@ class SimpleAnomalyDetector:public TimeSeriesAnomalyDetector{
 protected:
     vector<correlatedFeatures> cf;
     vector<AnomalyReport> anomalyReports;
+    float threshold = 0.9;
 public:
     SimpleAnomalyDetector();
     virtual ~SimpleAnomalyDetector();
@@ -42,10 +43,8 @@ public:
     vector<AnomalyReport> getAnomalyReports(){
         return anomalyReports;
     }
-    void setAllTreshold(float f){
-        for(correlatedFeatures iter: cf){
-            iter.threshold = f;
-        }
+    void changeThreshold(float f){
+        this->threshold = f;
     }
 
     void detectIfFlagIs1(const TimeSeries& ts, vector<correlatedFeatures>::iterator it, int i);

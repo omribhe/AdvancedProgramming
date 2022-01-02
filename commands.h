@@ -39,6 +39,7 @@ public:
 class SharedInformation{
 public:
     float threshold;
+    vector<AnomalyReport> reports;
     SharedInformation():threshold(0.9){};
 };
 
@@ -99,10 +100,11 @@ public:
     void execute(SharedInformation* shared) override{
         HybridAnomalyDetector detector;
         TimeSeries tsTrain("train.csv");
-        detector.setAllTreshold(shared->threshold);
+        detector.changeThreshold(shared->threshold);
         detector.learnNormal(tsTrain);
         TimeSeries tsTest("test.csv");
         detector.detect(tsTest);
+        shared->reports = detector.getAnomalyReports();
         dio->write("anomaly detection complete.\n");
     };
 };
@@ -112,7 +114,14 @@ class Results : public Command
 public:
     Results(DefaultIO *dio) : Command(dio, "4. display results") {};
     void execute(SharedInformation* shared) override {
-        std::cout<<"results on"<<std::endl;
+            for(auto it = std::begin(shared->reports); it != std::end(shared->reports); ++it) {
+            dio->write(it->timeStep);
+            dio->write("\t");
+            dio->write(it->description);
+            dio->write("\n");
+            }
+        dio->write("Done.\n");
+
     }
 
 

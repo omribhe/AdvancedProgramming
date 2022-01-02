@@ -100,25 +100,25 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
                 maxPearsonReturn = pearsonReturn;
             }
         }
-        if ((col != "")&&(maxPearsonReturn >= 0.9)) {
+        if ((col != "")&&(maxPearsonReturn >= threshold)) {
             //creates a new correlatedFeatures struct that represents two correlated vectors
             struct correlatedFeatures cor;
             cor.flag = 1;
             cor.feature1 = itTable1->first;
             cor.feature2 = col;
-            cor.corrlation = maxPearsonReturn;
+            cor.correlation = maxPearsonReturn;
             cor.lin_reg = makeLinearRegression(itTable1->second, table.find(col)->second);
             cor.threshold = CalculateThreshold(itTable1->second, table.find(col)->second, cor.lin_reg);
             cor.normalCircle = Circle();
             cf.push_back(cor);
         }
-        if((col != "") && (maxPearsonReturn >= 0.5) && (maxPearsonReturn < 0.9)) {
+        if((col != "") && (maxPearsonReturn >= 0.5) && (maxPearsonReturn < threshold)) {
             //creates a new correlatedFeatures struct that represents two correlated vectors
             struct correlatedFeatures cor;
             cor.flag = 0;
             cor.feature1 = itTable1->first;
             cor.feature2 = col;
-            cor.corrlation = maxPearsonReturn;
+            cor.correlation = maxPearsonReturn;
             cor.lin_reg = Line();
             Point** pointArray = returnPointArray(itTable1->second, table.find(col)->second);
             cor.normalCircle = findMinCircle(pointArray, itTable1->second.size());
