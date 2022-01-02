@@ -70,10 +70,21 @@ class AlgorithmSettings : public Command
 {
 public:
     AlgorithmSettings(DefaultIO *dio) : Command(dio, "2. algorithm settings") {};
-    void execute() override {
-        std::cout<<"algo settings on"<<std::endl;
+    void execute(SharedInformation* shared) override {
+        // get the threshold from the shared state
+        float temp = 0;
+        do {
+            dio->write("The current correlation threshold is ");
+            dio->write(shared->threshold);
+            dio->write("\nType a new threshold\n");
+            dio->read(&temp);
+            if (temp < 1 && temp > 0)
+                shared->threshold = temp;
+            else
+                dio->write("please choose a value between 0 and 1.\n");
+        }
+        while (temp > 1 || temp < 0 );
     }
-
 
 };
 class DetectAnomalies : public Command
