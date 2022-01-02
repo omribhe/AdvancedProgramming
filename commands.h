@@ -99,10 +99,12 @@ public:
     void execute(SharedInformation* shared) override{
         HybridAnomalyDetector detector;
         TimeSeries tsTrain("train.csv");
+        detector.setAllTreshold(shared->threshold);
         detector.learnNormal(tsTrain);
         TimeSeries tsTest("test.csv");
         detector.detect(tsTest);
-    }
+        dio->write("anomaly detection complete.\n");
+    };
 };
 
 class Results : public Command

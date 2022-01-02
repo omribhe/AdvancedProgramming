@@ -1,3 +1,0 @@
-/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/uri/CLionProjects/AdvancedProgramming/cmake-build-debug/CMakeFiles/AdvacedProgramming.dir

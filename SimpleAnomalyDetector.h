@@ -42,6 +42,11 @@ public:
     vector<AnomalyReport> getAnomalyReports(){
         return anomalyReports;
     }
+    void setAllTreshold(float f){
+        for(correlatedFeatures iter: cf){
+            iter.threshold = f;
+        }
+    }
 
     void detectIfFlagIs1(const TimeSeries& ts, vector<correlatedFeatures>::iterator it, int i);
     void detectIfFlagIs0(const TimeSeries& ts, vector<correlatedFeatures>::iterator it, int i);
