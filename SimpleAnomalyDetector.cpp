@@ -143,6 +143,7 @@ void SimpleAnomalyDetector::checkDev(Line l, Point p, float threshold, long inde
     }
 }
 /**
+ *
  * flag=1 means wer'e looking at a line, so checking as if it was a simple anomaly detector.
  *
  * @param ts time series object

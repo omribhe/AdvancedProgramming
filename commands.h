@@ -29,7 +29,6 @@ public:
             s = read();
         }
         out.close();
-
     }
 
 	// you may add additional methods here
