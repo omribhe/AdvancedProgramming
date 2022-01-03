@@ -17,8 +17,8 @@ void CLI::start(){
     int index = 0;
     SharedInformation shared;
     do {
-       dio->write("Welcome to the Anomaly Detection Server.");
-        dio->write("Please choose an option:");
+       dio->write("Welcome to the Anomaly Detection Server.\n");
+        dio->write("Please choose an option:\n");
         for(Command* element : menuVector)
           dio->write(element->description);
         std::string s = dio->read();
@@ -26,7 +26,7 @@ void CLI::start(){
 
         index = sFirst - 49;     // check if input is legal and delete the casting
         menuVector[index]->execute(&shared);
-    } while (index != 6);
+    } while (index != 5);
 }
 
 

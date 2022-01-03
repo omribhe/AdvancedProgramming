@@ -36,11 +36,21 @@ public:
 };
 
 // you may add here helper classes
+class UnionReport {
+public:
+    int start;
+    int end;
+    string name;
+    bool b = false;
+};
+
 class SharedInformation{
 public:
     float threshold = 0.9;
-    vector<AnomalyReport> reports = {};
+    vector <AnomalyReport> reports;
+    vector <UnionReport> up ;
 };
+
 
 // you may edit this class
 class Command{
@@ -58,7 +68,7 @@ public:
 class UploadCSV : public Command
 {
 public:
-    UploadCSV(DefaultIO *dio) : Command(dio, "1. upload a time series csv file") {};
+    UploadCSV(DefaultIO *dio) : Command(dio, "1.upload a time series csv file\n") {};
     void execute(SharedInformation* shared) override {
         dio->write("Please upload your local train CSV file.\n");
         dio->createNewCSVFile("train.csv");
@@ -74,7 +84,7 @@ public:
 class AlgorithmSettings : public Command
 {
 public:
-    AlgorithmSettings(DefaultIO *dio) : Command(dio, "2. algorithm settings") {};
+    AlgorithmSettings(DefaultIO *dio) : Command(dio, "2.algorithm settings\n") {};
     void execute(SharedInformation* shared) override {
         // get the threshold from the shared state
         float temp = 0;
@@ -95,7 +105,7 @@ public:
 class DetectAnomalies : public Command
 {
 public:
-    DetectAnomalies(DefaultIO *dio) : Command(dio, "3. detect anomalies") {};
+    DetectAnomalies(DefaultIO *dio) : Command(dio, "3.detect anomalies\n") {};
     void execute(SharedInformation* shared) override{
         HybridAnomalyDetector detector;
         TimeSeries tsTrain("train.csv");
@@ -111,7 +121,7 @@ public:
 class Results : public Command
 {
 public:
-    Results(DefaultIO *dio) : Command(dio, "4. display results") {};
+    Results(DefaultIO *dio) : Command(dio, "4.display results\n") {};
     void execute(SharedInformation* shared) override {
             for(auto it = std::begin(shared->reports); it != std::end(shared->reports); ++it) {
             dio->write(it->timeStep);
@@ -128,8 +138,34 @@ public:
 class UploadAndAnalyze : public Command
 {
 public:
-    UploadAndAnalyze(DefaultIO *dio) : Command(dio, "5. upload anomalies and analyze results") {};
+    UploadAndAnalyze(DefaultIO *dio) : Command(dio, "5.upload anomalies and analyze results\n") {};
+    void createUnionReportVector(SharedInformation* shared) {
+        UnionReport temp;
+        UnionReport *tempPtr = &temp;
+        bool newBool = true;
+        tempPtr->name = std::begin(shared->reports)->description;
+        tempPtr->start = std::begin(shared->reports)->timeStep;
+        for (auto it = std::begin(shared->reports), last = std::end(shared->reports)-1 ; it != std::end(shared->reports); ++it) {
+            if (it->timeStep == last->timeStep) {
+                temp.end = it->timeStep;
+                shared->up.push_back(*tempPtr);
+                break;
+            }
+            if (it->description == (it + 1)->description) {
+                continue;
+            } else {
+                temp.end = it->timeStep;
+                shared->up.push_back(temp);
+                temp.start = (it + 1)->timeStep;
+                temp.name = (it + 1)->description;
+                //UnionReport *tempPtr = &temp;
+            }
+        }
+
+    }
+
     void execute(SharedInformation* shared) override {
+       createUnionReportVector(shared);
         std::cout<<"upload and analyze on"<<std::endl;
     }
 
@@ -138,7 +174,7 @@ public:
 class ExitCLI : public Command
 {
 public:
-    ExitCLI(DefaultIO *dio) : Command(dio, "6. exit") {};
+    ExitCLI(DefaultIO *dio) : Command(dio, "6.exit\n") {};
     void execute(SharedInformation* shared) override {
         std::cout<<"exit on" <<std::endl;
     }
