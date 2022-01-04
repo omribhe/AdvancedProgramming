@@ -8,6 +8,7 @@
 
 #include <fstream>
 #include <vector>
+#include <sstream>
 #include "HybridAnomalyDetector.h"
 #include "timeseries.h"
 
@@ -138,6 +139,7 @@ class UploadAndAnalyze : public Command
 {
 public:
     UploadAndAnalyze(DefaultIO *dio) : Command(dio, "5.upload anomalies and analyze results\n") {};
+
     void createUnionReportVector(SharedInformation* shared) {
         UnionReport temp;
         UnionReport *tempPtr = &temp;
@@ -163,13 +165,50 @@ public:
 
     }
 
-    void execute(SharedInformation* shared) override {
-       createUnionReportVector(shared);
-        std::cout<<"upload and analyze on"<<std::endl;
+    void checkAnomalyTimeReport(SharedInformation* shared, int start, int end) {
+        for (UnionReport np: shared->up) {
+            if (np.b == true) {
+                continue;
+            }
+            if ((np.start < start) && (np.end < start)) {
+                np.b = false;
+            } else if ((np.start > end) && (np.end > end)) {
+                np.b = false;
+            } else {
+                np.b = true;
+            }
+        }
     }
 
 
+    void checkAnomalyTimes( SharedInformation* shared) {
+        string s = dio->read();
+        int start;
+        int end;
+        while (s != "done") {
+            vector<string> v;
+            stringstream ss(s);
+            while(ss.good()) {
+                string substr;
+                getline(ss, substr, ',');
+                v.push_back(substr);
+            }
+            start = stoi(v.front());
+            end = stoi(v.back());
+            checkAnomalyTimeReport(shared, start, end);
+            s = dio->read();
+        }
+    }
+
+    void execute(SharedInformation* shared) override {
+        createUnionReportVector(shared);
+        dio->write("Please upload your local anomalies file.\n");
+        checkAnomalyTimes(shared);
+        dio->write("Upload complete.\n");
+
+    }
 };
+
 class ExitCLI : public Command
 {
 public:

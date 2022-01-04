@@ -8,8 +8,8 @@ using namespace std;
 
 
 class STDtest:public DefaultIO{
-	ifstream in;
-	ofstream out;
+	std::ifstream in;
+	std::ofstream out;
 public:
 	STDtest(string inputFile,string outputFile){
 		in.open(inputFile);
@@ -74,11 +74,11 @@ void check(string outputFile,string expectedOutputFile){
  //small test
 int main(){
 
-	STDtest std("/home/uri/CLionProjects/AdvancedProgramming/input.txt","output.txt");
+	STDtest std("/home/omri/CLionProjects/Advanced Programming/input.txt","/home/omri/CLionProjects/Advanced Programming/cmake-build-debug/output.txt");
 	CLI cli(&std);
 	cli.start();
 	std.close();
-	check("output.txt","expectedOutput.txt");
+	check("/home/omri/CLionProjects/Advanced Programming/cmake-build-debug/output.txt","/home/omri/CLionProjects/Advanced Programming/expectedOutput.txt");
 	cout<<"done"<<endl;
 	return 0;
 }
