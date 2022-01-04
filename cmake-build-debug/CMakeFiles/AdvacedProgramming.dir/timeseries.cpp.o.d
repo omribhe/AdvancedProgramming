@@ -1,7 +1,7 @@
 CMakeFiles/AdvacedProgramming.dir/timeseries.cpp.o: \
- /home/uri/CLionProjects/AdvancedProgramming/timeseries.cpp \
+ /home/omri/CLionProjects/Advanced\ Programming/timeseries.cpp \
  /usr/include/stdc-predef.h \
- /home/uri/CLionProjects/AdvancedProgramming/timeseries.h \
+ /home/omri/CLionProjects/Advanced\ Programming/timeseries.h \
  /usr/include/c++/9/map /usr/include/c++/9/bits/stl_tree.h \
  /usr/include/c++/9/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
