@@ -1,5 +1,5 @@
 CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.o: \
- /home/uri/CLionProjects/AdvancedProgramming/MainTrain.cpp \
+ /home/omri/CLionProjects/Advanced\ Programming/MainTrain.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -140,18 +140,18 @@ CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/9/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++io.h \
  /usr/include/c++/9/bits/fstream.tcc \
- /home/uri/CLionProjects/AdvancedProgramming/commands.h \
+ /home/omri/CLionProjects/Advanced\ Programming/commands.h \
  /usr/include/string.h /usr/include/strings.h /usr/include/c++/9/vector \
  /usr/include/c++/9/bits/stl_construct.h \
  /usr/include/c++/9/bits/stl_uninitialized.h \
  /usr/include/c++/9/bits/stl_vector.h \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
  /usr/include/c++/9/sstream /usr/include/c++/9/bits/sstream.tcc \
- /home/uri/CLionProjects/AdvancedProgramming/HybridAnomalyDetector.h \
- /home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.h \
- /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h \
- /home/uri/CLionProjects/AdvancedProgramming/AnomalyDetector.h \
- /home/uri/CLionProjects/AdvancedProgramming/timeseries.h \
+ /home/omri/CLionProjects/Advanced\ Programming/HybridAnomalyDetector.h \
+ /home/omri/CLionProjects/Advanced\ Programming/SimpleAnomalyDetector.h \
+ /home/omri/CLionProjects/Advanced\ Programming/anomaly_detection_util.h \
+ /home/omri/CLionProjects/Advanced\ Programming/AnomalyDetector.h \
+ /home/omri/CLionProjects/Advanced\ Programming/timeseries.h \
  /usr/include/c++/9/map /usr/include/c++/9/bits/stl_tree.h \
  /usr/include/c++/9/ext/aligned_buffer.h \
  /usr/include/c++/9/bits/stl_map.h /usr/include/c++/9/tuple \
@@ -173,6 +173,6 @@ CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.o: \
  /usr/include/c++/9/bits/algorithmfwd.h \
  /usr/include/c++/9/bits/stl_heap.h /usr/include/c++/9/bits/stl_tempbuf.h \
  /usr/include/c++/9/bits/uniform_int_dist.h /usr/include/c++/9/limits \
- /home/uri/CLionProjects/AdvancedProgramming/minCircle.h \
+ /home/omri/CLionProjects/Advanced\ Programming/minCircle.h \
  /usr/include/c++/9/stdlib.h \
- /home/uri/CLionProjects/AdvancedProgramming/CLI.h
+ /home/omri/CLionProjects/Advanced\ Programming/CLI.h

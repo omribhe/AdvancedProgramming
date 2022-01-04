@@ -230,6 +230,13 @@ public:
         dio->write("\n");
 
     }
+
+    void cleanUnionReport(SharedInformation* shared) {
+        for (UnionReport &np: shared->up) {
+            np.b = false;
+        }
+    }
+
     void execute(SharedInformation* shared) override {
         if (shared->vectorCreated == false) {
             createUnionReportVector(shared);
@@ -239,6 +246,7 @@ public:
         int P = checkAnomalyTimes(shared);
         dio->write("Upload complete.\n");
         printAnomalyRate(shared, P);
+        cleanUnionReport(shared);
     }
 };
 
