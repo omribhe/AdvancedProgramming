@@ -1,5 +1,5 @@
 CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o: \
- /home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.cpp \
+ /home/omri/CLionProjects/Advanced\ Programming/SimpleAnomalyDetector.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/9/math.h \
  /usr/include/c++/9/cmath \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
@@ -56,9 +56,9 @@ CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.h \
- /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h \
- /home/uri/CLionProjects/AdvancedProgramming/AnomalyDetector.h \
+ /home/omri/CLionProjects/Advanced\ Programming/SimpleAnomalyDetector.h \
+ /home/omri/CLionProjects/Advanced\ Programming/anomaly_detection_util.h \
+ /home/omri/CLionProjects/Advanced\ Programming/AnomalyDetector.h \
  /usr/include/c++/9/string /usr/include/c++/9/bits/stringfwd.h \
  /usr/include/c++/9/bits/memoryfwd.h \
  /usr/include/c++/9/bits/char_traits.h \
@@ -139,7 +139,7 @@ CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o: \
  /usr/include/c++/9/bits/stl_uninitialized.h \
  /usr/include/c++/9/bits/stl_vector.h \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
- /home/uri/CLionProjects/AdvancedProgramming/timeseries.h \
+ /home/omri/CLionProjects/Advanced\ Programming/timeseries.h \
  /usr/include/c++/9/map /usr/include/c++/9/bits/stl_tree.h \
  /usr/include/c++/9/ext/aligned_buffer.h \
  /usr/include/c++/9/bits/stl_map.h /usr/include/c++/9/tuple \
@@ -153,7 +153,7 @@ CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o: \
  /usr/include/c++/9/bits/stl_heap.h /usr/include/c++/9/bits/stl_tempbuf.h \
  /usr/include/c++/9/bits/uniform_int_dist.h /usr/include/c++/9/limits \
  /usr/include/string.h /usr/include/strings.h \
- /home/uri/CLionProjects/AdvancedProgramming/minCircle.h \
+ /home/omri/CLionProjects/Advanced\ Programming/minCircle.h \
  /usr/include/c++/9/iostream /usr/include/c++/9/ostream \
  /usr/include/c++/9/ios /usr/include/c++/9/bits/ios_base.h \
  /usr/include/c++/9/bits/locale_classes.h \
