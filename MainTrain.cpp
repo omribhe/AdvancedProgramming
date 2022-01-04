@@ -74,11 +74,11 @@ void check(string outputFile,string expectedOutputFile){
  //small test
 int main(){
 
-	STDtest std("/home/omri/CLionProjects/Advanced Programming/input.txt","/home/omri/CLionProjects/Advanced Programming/cmake-build-debug/output.txt");
+	STDtest std("/home/uri/CLionProjects/AdvancedProgramming/input.txt","output.txt");
 	CLI cli(&std);
 	cli.start();
 	std.close();
-	check("/home/omri/CLionProjects/Advanced Programming/cmake-build-debug/output.txt","/home/omri/CLionProjects/Advanced Programming/expectedOutput.txt");
+	check("output.txt","/home/uri/CLionProjects/AdvancedProgramming/expectedOutput.txt");
 	cout<<"done"<<endl;
 	return 0;
 }

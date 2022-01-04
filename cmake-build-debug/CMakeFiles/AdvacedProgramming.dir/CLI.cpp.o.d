@@ -1,8 +1,7 @@
 CMakeFiles/AdvacedProgramming.dir/CLI.cpp.o: \
- /home/omri/CLionProjects/Advanced\ Programming/CLI.cpp \
+ /home/uri/CLionProjects/AdvancedProgramming/CLI.cpp \
  /usr/include/stdc-predef.h \
- /home/omri/CLionProjects/Advanced\ Programming/CLI.h \
- /usr/include/string.h \
+ /home/uri/CLionProjects/AdvancedProgramming/CLI.h /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -13,7 +12,7 @@ CMakeFiles/AdvacedProgramming.dir/CLI.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /home/omri/CLionProjects/Advanced\ Programming/commands.h \
+ /home/uri/CLionProjects/AdvancedProgramming/commands.h \
  /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -150,11 +149,11 @@ CMakeFiles/AdvacedProgramming.dir/CLI.cpp.o: \
  /usr/include/c++/9/bits/stl_vector.h \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
  /usr/include/c++/9/sstream /usr/include/c++/9/bits/sstream.tcc \
- /home/omri/CLionProjects/Advanced\ Programming/HybridAnomalyDetector.h \
- /home/omri/CLionProjects/Advanced\ Programming/SimpleAnomalyDetector.h \
- /home/omri/CLionProjects/Advanced\ Programming/anomaly_detection_util.h \
- /home/omri/CLionProjects/Advanced\ Programming/AnomalyDetector.h \
- /home/omri/CLionProjects/Advanced\ Programming/timeseries.h \
+ /home/uri/CLionProjects/AdvancedProgramming/HybridAnomalyDetector.h \
+ /home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.h \
+ /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h \
+ /home/uri/CLionProjects/AdvancedProgramming/AnomalyDetector.h \
+ /home/uri/CLionProjects/AdvancedProgramming/timeseries.h \
  /usr/include/c++/9/map /usr/include/c++/9/bits/stl_tree.h \
  /usr/include/c++/9/ext/aligned_buffer.h \
  /usr/include/c++/9/bits/stl_map.h /usr/include/c++/9/tuple \
@@ -176,5 +175,5 @@ CMakeFiles/AdvacedProgramming.dir/CLI.cpp.o: \
  /usr/include/c++/9/bits/algorithmfwd.h \
  /usr/include/c++/9/bits/stl_heap.h /usr/include/c++/9/bits/stl_tempbuf.h \
  /usr/include/c++/9/bits/uniform_int_dist.h /usr/include/c++/9/limits \
- /home/omri/CLionProjects/Advanced\ Programming/minCircle.h \
+ /home/uri/CLionProjects/AdvancedProgramming/minCircle.h \
  /usr/include/c++/9/stdlib.h

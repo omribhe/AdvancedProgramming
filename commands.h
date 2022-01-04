@@ -22,14 +22,17 @@ public:
 	virtual void read(float* f)=0;
 	virtual ~DefaultIO(){}
 
-    void createNewCSVFile(std::string name) {
+    int createNewCSVFile(std::string name) {
         ofstream out(name);
         string s = read();
+        int count = -1;
         while (s != "done") {
+            count++;
             out<<s<<endl;
             s = read();
         }
         out.close();
+        return count;
     }
 
 	// you may add additional methods here
@@ -49,6 +52,9 @@ public:
     float threshold = 0.9;
     vector <AnomalyReport> reports;
     vector <UnionReport> up ;
+    int numOfRows = 0;
+    int N = 0;
+    bool vectorCreated = false;
 };
 
 
@@ -74,7 +80,7 @@ public:
         dio->createNewCSVFile("train.csv");
         dio->write("Upload complete.\n");
         dio->write("Please upload your local test CSV file.\n");
-        dio->createNewCSVFile("test.csv");
+        shared->numOfRows = dio->createNewCSVFile("test.csv");
         dio->write("Upload complete.\n");
     }
 
@@ -183,6 +189,7 @@ public:
 
     int checkAnomalyTimes( SharedInformation* shared) {
         int count = 0;
+        int N = shared->numOfRows;
         string s = dio->read();
         int start;
         int end;
@@ -196,29 +203,42 @@ public:
             }
             start = stoi(v.front());
             end = stoi(v.back());
+            N -= end-start;
             checkAnomalyTimeReport(shared, start, end);
             count++;
             s = dio->read();
         }
+        shared->N = N;
         return count;
     }
 
     void printAnomalyRate(SharedInformation* shared, int p){
-        int count = 0;
+        float count = 0.0;
+        float countFalse = 0.0;
         for(UnionReport np: shared->up){
             if(np.b == true){
                 count++;
             }
+            else
+                countFalse++;
         }
         dio->write("True Positive Rate: ");
-        dio->write(count/p);
+        dio->write(((int)(1000 * count/p)/1000.0));
+        dio->write("\n");
+        dio->write("False Positive Rate: ");
+        dio->write(((int)(1000 * countFalse/shared->N)/1000.0));
+        dio->write("\n");
+
     }
     void execute(SharedInformation* shared) override {
-        createUnionReportVector(shared);
+        if (shared->vectorCreated == false) {
+            createUnionReportVector(shared);
+            shared->vectorCreated = true;
+        }
         dio->write("Please upload your local anomalies file.\n");
-        int p = checkAnomalyTimes(shared);
+        int P = checkAnomalyTimes(shared);
         dio->write("Upload complete.\n");
-        printAnomalyRate(shared, p);
+        printAnomalyRate(shared, P);
     }
 };
 
@@ -227,7 +247,6 @@ class ExitCLI : public Command
 public:
     ExitCLI(DefaultIO *dio) : Command(dio, "6.exit\n") {};
     void execute(SharedInformation* shared) override {
-        std::cout<<"exit on" <<std::endl;
     }
 
 
