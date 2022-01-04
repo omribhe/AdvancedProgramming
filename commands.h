@@ -166,7 +166,7 @@ public:
     }
 
     void checkAnomalyTimeReport(SharedInformation* shared, int start, int end) {
-        for (UnionReport np: shared->up) {
+        for (UnionReport &np: shared->up) {
             if (np.b == true) {
                 continue;
             }
@@ -181,7 +181,8 @@ public:
     }
 
 
-    void checkAnomalyTimes( SharedInformation* shared) {
+    int checkAnomalyTimes( SharedInformation* shared) {
+        int count = 0;
         string s = dio->read();
         int start;
         int end;
@@ -196,16 +197,28 @@ public:
             start = stoi(v.front());
             end = stoi(v.back());
             checkAnomalyTimeReport(shared, start, end);
+            count++;
             s = dio->read();
         }
+        return count;
     }
 
+    void printAnomalyRate(SharedInformation* shared, int p){
+        int count = 0;
+        for(UnionReport np: shared->up){
+            if(np.b == true){
+                count++;
+            }
+        }
+        dio->write("True Positive Rate: ");
+        dio->write(count/p);
+    }
     void execute(SharedInformation* shared) override {
         createUnionReportVector(shared);
         dio->write("Please upload your local anomalies file.\n");
-        checkAnomalyTimes(shared);
+        int p = checkAnomalyTimes(shared);
         dio->write("Upload complete.\n");
-
+        printAnomalyRate(shared, p);
     }
 };
 
