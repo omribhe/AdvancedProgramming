@@ -1,7 +1,7 @@
 CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.o: \
- /home/omri/CLionProjects/Advanced\ Programming/anomaly_detection_util.cpp \
+ /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.cpp \
  /usr/include/stdc-predef.h \
- /home/omri/CLionProjects/Advanced\ Programming/anomaly_detection_util.h \
+ /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h \
  /usr/include/c++/9/cmath \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \

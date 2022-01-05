@@ -1,7 +1,7 @@
 CMakeFiles/AdvacedProgramming.dir/minCircle.cpp.o: \
- /home/omri/CLionProjects/Advanced\ Programming/minCircle.cpp \
+ /home/uri/CLionProjects/AdvancedProgramming/minCircle.cpp \
  /usr/include/stdc-predef.h \
- /home/omri/CLionProjects/Advanced\ Programming/minCircle.h \
+ /home/uri/CLionProjects/AdvancedProgramming/minCircle.h \
  /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -143,7 +143,7 @@ CMakeFiles/AdvacedProgramming.dir/minCircle.cpp.o: \
  /usr/include/c++/9/bits/stl_vector.h \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
  /usr/include/c++/9/stdlib.h \
- /home/omri/CLionProjects/Advanced\ Programming/anomaly_detection_util.h \
+ /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h \
  /usr/include/c++/9/math.h /usr/include/c++/9/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \

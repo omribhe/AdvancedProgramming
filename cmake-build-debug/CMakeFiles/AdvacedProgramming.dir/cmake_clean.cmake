@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/AdvacedProgramming.dir/HybridAnomalyDetector.cpp.o.d"
   "CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.o"
   "CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.o.d"
+  "CMakeFiles/AdvacedProgramming.dir/Server.cpp.o"
+  "CMakeFiles/AdvacedProgramming.dir/Server.cpp.o.d"
   "CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o"
   "CMakeFiles/AdvacedProgramming.dir/SimpleAnomalyDetector.cpp.o.d"
   "CMakeFiles/AdvacedProgramming.dir/anomaly_detection_util.cpp.o"
