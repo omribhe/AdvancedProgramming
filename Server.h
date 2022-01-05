@@ -13,6 +13,7 @@
 #include <netinet/in.h>
 #include <pthread.h>
 #include <thread>
+#include "commands.h"
 
 
 
@@ -26,17 +27,18 @@ class ClientHandler{
 
 
 // you can add helper classes here and implement on the cpp file
-
 class SocketIO: public DefaultIO {
-    int IDclient;
-    SocketIO(int clientID):IDclient(IDclient){}
+    int clientPort;
+public:
     virtual string read();
+
     virtual void write(string text);
+
     virtual void write(float f);
-    virtual void read(float* f);
 
-
+    virtual void read(float *f);
 };
+
 // edit your AnomalyDetectionHandler class here
 class AnomalyDetectionHandler:public ClientHandler{
 	public:

@@ -1,5 +1,5 @@
 CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.o: \
- /home/uri/CLionProjects/AdvancedProgramming/MainTrain.cpp \
+ /home/omri/CLionProjects/Advanced\ Programming/MainTrain.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -189,31 +189,4 @@ CMakeFiles/AdvacedProgramming.dir/MainTrain.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
- /home/uri/CLionProjects/AdvancedProgramming/Server.h \
- /home/uri/CLionProjects/AdvancedProgramming/commands.h \
- /usr/include/c++/9/vector /usr/include/c++/9/bits/stl_vector.h \
- /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
- /usr/include/c++/9/sstream /usr/include/c++/9/bits/sstream.tcc \
- /home/uri/CLionProjects/AdvancedProgramming/HybridAnomalyDetector.h \
- /home/uri/CLionProjects/AdvancedProgramming/SimpleAnomalyDetector.h \
- /home/uri/CLionProjects/AdvancedProgramming/anomaly_detection_util.h \
- /home/uri/CLionProjects/AdvancedProgramming/AnomalyDetector.h \
- /home/uri/CLionProjects/AdvancedProgramming/timeseries.h \
- /usr/include/c++/9/map /usr/include/c++/9/bits/stl_tree.h \
- /usr/include/c++/9/bits/stl_map.h /usr/include/c++/9/bits/stl_multimap.h \
- /usr/include/c++/9/bits/erase_if.h /usr/include/c++/9/math.h \
- /usr/include/c++/9/cmath /usr/include/math.h \
- /usr/include/x86_64-linux-gnu/bits/math-vector.h \
- /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
- /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
- /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
- /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
- /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
- /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /usr/include/c++/9/algorithm /usr/include/c++/9/bits/stl_algo.h \
- /usr/include/c++/9/bits/algorithmfwd.h \
- /usr/include/c++/9/bits/stl_heap.h \
- /usr/include/c++/9/bits/uniform_int_dist.h \
- /home/uri/CLionProjects/AdvancedProgramming/minCircle.h
+ /home/omri/CLionProjects/Advanced\ Programming/Server.h
