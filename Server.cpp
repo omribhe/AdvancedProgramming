@@ -2,7 +2,6 @@
 #include "Server.h"
 
 
-
 string SocketIO::read() {
     char* letter = nullptr;
     string buffer = "";
@@ -27,7 +26,19 @@ void SocketIO::read(float *f) {
     this->read();
 }
 
-void Server::start(ClientHandler& ch)throw(const char*){	
+
+
+void Server::start(ClientHandler& ch)throw(const char*){
+    t = new thread([&ch,this](){
+        socklen_t size = sizeof(client);
+        int fileDescriptorAccept = accept(fileD, (struct sockaddr *) &client, &size);
+        if (fileDescriptorAccept == -1) {
+            throw ("accept filed");
+        }
+        ch.handle(fileDescriptorAccept);
+        close(fileDescriptorAccept);
+        close(fileD);
+    });
 }
 
 void Server::stop(){
@@ -35,5 +46,9 @@ void Server::stop(){
 }
 
 Server::~Server() {
+}
+
+void ClientHandler::handle(int clientID){
+
 }
 
