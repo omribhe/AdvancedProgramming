@@ -7,14 +7,18 @@
 
 #ifndef SERVER_H_
 #define SERVER_H_
-#include <thread>
-#include "commands.h"
 #include <sys/socket.h>
+#include "CLI.h"
 #include <netinet/in.h>
+#include <iostream>
 #include <pthread.h>
+#include <sstream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 #include <thread>
-#include "commands.h"
-
+#include<signal.h>
+#include <unistd.h>
 
 
 using namespace std;
