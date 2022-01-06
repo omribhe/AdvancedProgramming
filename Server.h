@@ -60,6 +60,7 @@ class Server {
 	thread* t; // the thread to run the start() method in
 
 	// you may add data members
+    bool isTurnOn = false;
 
 public:
 	Server(int port) throw (const char*) {
@@ -75,6 +76,7 @@ public:
         int flag2 = listen(this->fileD, 5);
         if (flag2 == -1)
             throw "listen failed";
+        isTurnOn = true;
     }
 	virtual ~Server();
 	void start(ClientHandler& ch)throw(const char*);

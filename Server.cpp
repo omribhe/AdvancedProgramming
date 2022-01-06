@@ -30,18 +30,24 @@ void SocketIO::read(float *f) {
 
 void Server::start(ClientHandler& ch)throw(const char*){
     t = new thread([&ch,this](){
-        socklen_t size = sizeof(client);
-        int fileDescriptorAccept = accept(fileD, (struct sockaddr *) &client, &size);
-        if (fileDescriptorAccept == -1) {
-            throw ("accept filed");
+        __sighandler_t connect_alarm;
+        signal(SIGALRM,connect_alarm ); /* connect_alarm is you signal handler */
+        while(isTurnOn) {
+            alarm( 2 ); /* secs is your timeout in seconds */
+            socklen_t size = sizeof(client);
+            int fileDescriptorAccept = accept(fileD, (struct sockaddr *) &client, &size);
+            if (fileDescriptorAccept == -1) {
+                throw ("accept filed");
+            }
+            ch.handle(fileDescriptorAccept);
+            close(fileDescriptorAccept);
         }
-        ch.handle(fileDescriptorAccept);
-        close(fileDescriptorAccept);
         close(fileD);
     });
 }
 
 void Server::stop(){
+    this->isTurnOn = false;
 	t->join(); // do not delete this!
 }
 
