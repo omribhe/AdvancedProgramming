@@ -23,10 +23,9 @@ void SocketIO::write(float f) {
 }
 
 void SocketIO::read(float *f) {
-    this->read();
+    float temp = stof(this->read());
+    *f = temp;
 }
-
-
 
 void Server::start(ClientHandler& ch)throw(const char*){
     t = new thread([&ch,this](){
@@ -52,9 +51,5 @@ void Server::stop(){
 }
 
 Server::~Server() {
-}
-
-void ClientHandler::handle(int clientID){
-
 }
 
