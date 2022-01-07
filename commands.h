@@ -97,7 +97,8 @@ public:
         do {
             dio->write("The current correlation threshold is ");
             dio->write(shared->threshold);
-            dio->write("\nType a new threshold\n");
+            dio->write("\n");
+            dio->write("Type a new threshold\n");
             dio->read(&temp);
             if (temp < 1 && temp > 0)
                 shared->threshold = temp;
