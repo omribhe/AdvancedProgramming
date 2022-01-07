@@ -5,7 +5,7 @@
 string SocketIO::read() {
     char letter = 0;
     string buffer = "";
-    while(!strcmp(&letter,"\n")){
+    while(letter != '\n'){
         recv(this->clientPort,&letter,sizeof(char),0);
         buffer += letter;
     }
@@ -23,23 +23,23 @@ void SocketIO::write(float f) {
 }
 
 void SocketIO::read(float *f) {
-    float temp = stof(this->read());
+    float temp = std::stof(this->read());
     *f = temp;
 }
 
 void Server::start(ClientHandler& ch)throw(const char*){
     t = new thread([&ch,this](){
-        __sighandler_t connect_alarm;
+        __sighandler_t connect_alarm = nullptr;
         signal(SIGALRM,connect_alarm ); /* connect_alarm is you signal handler */
         while(isTurnOn) {
-            alarm( 2 ); /* secs is your timeout in seconds */
+            alarm( 1 ); /* secs is your timeout in seconds */
             socklen_t size = sizeof(client);
             int fileDescriptorAccept = accept(fileD, (struct sockaddr *) &client, &size);
-            if (fileDescriptorAccept == -1) {
-                throw ("accept filed");
+            if (fileDescriptorAccept > 0) {
+                ch.handle(fileDescriptorAccept);
+                close(fileDescriptorAccept);
             }
-            ch.handle(fileDescriptorAccept);
-            close(fileDescriptorAccept);
+            alarm(0);
         }
         close(fileD);
     });

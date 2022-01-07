@@ -1,7 +1,7 @@
 /*
  * run2.cpp
  *
- *  Created on: 8 áãöî× 2019
+ *  Created on: 8 ï¿½ï¿½ï¿½ï¿½ï¿½ 2019
  *      Author: Eli
  */
 
@@ -19,8 +19,6 @@
 #include <unistd.h>
 #include <time.h>
 #include "Server.h"
-
-
 
 
 using namespace std;
@@ -92,7 +90,7 @@ void clientSide2(int port,string outputFile)throw (const char*){
 	int serverFD = initClient(port);
 	
 	ofstream out(outputFile);
-	ifstream in("input.txt");
+	ifstream in("/home/omri/CLionProjects/Advanced Programming/input.txt");
 	string input="";
 	while(input!="6"){
 		readMenue(out,serverFD);

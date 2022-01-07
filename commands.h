@@ -26,7 +26,7 @@ public:
         ofstream out(name);
         string s = read();
         int count = -1;
-        while (s != "done") {
+        while (s != "done\n") {
             count++;
             out<<s<<endl;
             s = read();
