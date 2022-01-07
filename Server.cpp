@@ -3,11 +3,11 @@
 
 
 string SocketIO::read() {
-    char* letter = nullptr;
+    char letter = 0;
     string buffer = "";
-    while(!strcmp(letter,"\n")){
-        recv(this->clientPort,letter,sizeof(char),0);
-        buffer += *letter;
+    while(!strcmp(&letter,"\n")){
+        recv(this->clientPort,&letter,sizeof(char),0);
+        buffer += letter;
     }
     return buffer;
 }
