@@ -28,7 +28,7 @@ public:
         int count = -1;
         while (s != "done\n") {
             count++;
-            out<<s<<endl;
+            out<<s;
             s = read();
         }
         out.close();
@@ -194,12 +194,14 @@ public:
         string s = dio->read();
         int start;
         int end;
-        while (s != "done") {
+        while (s != "done\n") {
             vector<string> v;
             stringstream ss(s);
             while(ss.good()) {
                 string substr;
                 getline(ss, substr, ',');
+                stringstream temp(substr);
+                getline(temp, substr, '\n');
                 v.push_back(substr);
             }
             start = stoi(v.front());
@@ -257,8 +259,6 @@ public:
     ExitCLI(DefaultIO *dio) : Command(dio, "6.exit\n") {};
     void execute(SharedInformation* shared) override {
     }
-
-
 };
 
 
