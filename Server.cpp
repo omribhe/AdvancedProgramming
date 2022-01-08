@@ -18,8 +18,10 @@ void SocketIO::write(string text) {
 }
 
 void SocketIO::write(float f) {
-    string s(std::to_string(f));
-    this->write(s);
+    stringstream  temp;
+    temp<<f;
+    string answer = temp.str();
+    write(answer);
 }
 
 void SocketIO::read(float *f) {

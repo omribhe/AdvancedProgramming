@@ -226,10 +226,12 @@ public:
                 countFalse++;
         }
         dio->write("True Positive Rate: ");
-        dio->write(((int)(1000 * count/p)/1000.0));
+        float temp = (int)(1000 * count/p)/1000.0;
+        dio->write(temp);
         dio->write("\n");
         dio->write("False Positive Rate: ");
-        dio->write(((int)(1000 * countFalse/shared->N)/1000.0));
+        temp = ((int)(1000 * countFalse/shared->N)/1000.0);
+        dio->write(temp);
         dio->write("\n");
 
     }
