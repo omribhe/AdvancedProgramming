@@ -90,8 +90,9 @@ void clientSide2(int port,string outputFile)throw (const char*){
 	int serverFD = initClient(port);
 	
 	ofstream out(outputFile);
-	ifstream in("/home/omri/CLionProjects/Advanced Programming/input.txt");
+	ifstream in("input.txt");
 	string input="";
+    //home/omri/CLionProjects/Advanced Programming/
 	while(input!="6"){
 		readMenue(out,serverFD);
 		getline(in,input);			
